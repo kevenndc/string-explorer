@@ -1,14 +1,17 @@
 <template>
-  <h1>Javascript String Explorer</h1>
+  <main>
+    <h1>JavaScript String Explorer</h1>
+    <method-type :number="10"></method-type>
+  </main>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import MethodType from './components/MethodType.vue';
 
 export default {
   name: "App",
   components: {
-    HelloWorld,
+    MethodType,
   },
 };
 </script>

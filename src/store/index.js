@@ -1,8 +1,20 @@
+
 import { createStore } from "vuex";
 
-export default createStore({
-  state: {},
+// initialize the vuex store using the vuex module.
+createStore({
+  state: {
+    selectedMethod: undefined,
+  },
   mutations: {},
   actions: {},
-  modules: {}
 });
+
+// initialize the internationalization plugin on the vue instance.
+
+// function getStartLang() {
+//   let userLang =  navigator.language;
+//   userLang.replace('-', '_');
+
+//   return acceptedLangs.includes(userLang) ? userLang : 'en';
+// }
