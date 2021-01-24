@@ -4,7 +4,8 @@ import store from "./store";
 import { createI18n } from 'vue-i18n';
 
 // locales
-import en from './locales/en.json';
+import en from './locales/en/en.json';
+import pt from './locales/pt/pt.json';
 
 function getStartLang() {
   const userLang =  navigator.language;
@@ -14,7 +15,8 @@ function getStartLang() {
 }
 
 const locales = new Map()
-                .set('en_US', en);
+                .set('en-US', en)
+                .set('pt-BR', pt);
 
 const messages = Object.create(locales.values);
 
@@ -23,10 +25,9 @@ console.log(messages);
 const i18n = createI18n({
   locale: getStartLang(),
   messages
-})
+});
 
 createApp(App)
   .use(store)
   .use(i18n)
-  .mount("#app");
-
+  .mount("#app")

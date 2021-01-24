@@ -5,16 +5,12 @@ import { createStore } from "vuex";
 createStore({
   state: {
     selectedMethod: undefined,
+    currentLang: 'en'
   },
-  mutations: {},
+  mutations: {
+    changeLang(state, newLang) {
+      state.currentLang = newLang;
+    }
+  },
   actions: {},
 });
-
-// initialize the internationalization plugin on the vue instance.
-
-// function getStartLang() {
-//   let userLang =  navigator.language;
-//   userLang.replace('-', '_');
-
-//   return acceptedLangs.includes(userLang) ? userLang : 'en';
-// }

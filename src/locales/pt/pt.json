@@ -1,4 +1,7 @@
 {
+  "labels": {
+    "translatedBy": "Traduzido por"
+  },
   "methods": {
     "find": {
       "chatAt": {
