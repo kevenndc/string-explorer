@@ -1,4 +1,3 @@
-
 import { createStore } from "vuex";
 
 // initialize the vuex store using the vuex module.
