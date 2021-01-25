@@ -28,30 +28,50 @@
     },
     "findIndex": {
       "indexOf": {
-        "optionLabel": "a character in a given index",
-        "description": "Returns a single character in a given index of the string",
-        "example": "const sentence = 'Code is poetry';<br> const index = 2;<br>console.log('The character at index ' + index + ' is ' + sentence.charAt(index));",
-        "output": "The character at index 2 is d"
+        "optionLabel": "the first occurrence of a value",
+        "description": "Returns the index of the first occurrence a given value in the string",
+        "example": "const sentence = 'Code is poetry';<br>console.log(`The index of 'o' is ${sentence.indexOf('o')}`);",
+        "output": "The index of 'o' is 1"
       },
       "lastIndexOf": {
-        "optionLabel": "a character code in a given index",
-        "description": "Returns the character UTF-16 code identifier in a given index of the string",
-        "example": "const sentence = 'Code is poetry';<br>const index = 2;<br>const code = sentence.charCodeAt(index);<br>console.log('The character code  ' + code + ' is equal to ' + sentence.charAt(index));",
-        "output": "The character code 100 is equal to d"
+        "optionLabel": "the last occurrence of a value",
+        "description": "Returns the index of the last occurrence a given value in the string",
+        "example": "const sentence = 'Code is poetry';<br>console.log(`The last index of 'o' is ${sentence.lastIndexOf('o')}`);",
+        "output": "The last index of 'o' 9"
       },
       "search": {
-        "optionLabel": "a character code in a given index",
+        "optionLabel": "the first occurrence of a regular expression",
         "description": "Returns the character UTF-16 code identifier in a given index of the string",
-        "example": "const sentence = 'Code is poetry';<br>const index = 2;<br>const code = sentence.charCodeAt(index);<br>console.log('The character code  ' + code + ' is equal to ' + sentence.charAt(index));",
+        "example": "const sentence = 'Code is poetry';<br>const index = 2;<br>const code = sentence.charCodeAt(index);<br>console.log(`The character code ${code} is equal to ${sentence.charAt(index)}`);",
         "output": "The character code 100 is equal to d"
       }
     },
+    "add": {
+      "concat": {
+        "optionLabel": "one or more values to a string",
+        "description": "Returns a new string with the original string concatenated with the given values",
+        "example": "const code = 'Code';<br>console.log(code.concat(' is ', 'poetry');",
+        "output": "Code is poetry"
+      },
+      "padStart": {
+        "optionLabel": "the same value repeated at the beginning of a string",
+        "description": "Returns a new string filled with the same value at the beginning of the string until it reaches a given length",
+        "example": "const lastDigits = '5834';<br>const maskedNumber = lastDigits.padStart(16, '*')<br>console.log(maskedNumber);",
+        "output": "************5834"
+      },
+      "padEnd": {
+        "optionLabel": "the same value repeated at the end of a string",
+        "description": "Returns a new string filled with the same value at the end of the string until it reaches a given length",
+        "example": "const firstDigits = '0896';<br>const maskedNumber = firstDigits.padEnd(16, '*')<br>console.log(maskedNumber);",
+        "output": "0896************"
+      } 
+    },
     "modify": {
-      "replace": {
-        "optionLabel": "by replacing the first occurrence of a pattern with other string",
-        "description": "Returns a new string with the first occurrence of a given pattern replaced by a given string",
-        "example": "const sentence = 'Code is poetry';<br>const newSentence = sentence.replace('poetry', 'art');<br>console.log(newSentence);",
-        "output": "Code is art"
+      "repeat": {
+        "optionLabel": "repeat the string a number of times",
+        "description": "Returns a new string with the original value repeated a given number of times",
+        "example": "const abc = 'Abc';<br>console.log(abc.repeat(3);",
+        "output": "AbcAbcAbc"
       }
     }
   }
