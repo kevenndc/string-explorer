@@ -3,27 +3,169 @@
     "translatedBy": "Traduzido por"
   },
   "methods": {
-    "find": {
+    "findChar": {
       "chatAt": {
-        "optionLabel": "um caractere em um determinado índice",
-        "description": "Retorna um único caractere em um determinado índice da String",
-        "example": "const sentence = 'Code is poetry';<br>const index = 2;<br>console.log('O caractere no índice ' + index + ' é ' + sentence.charAt(index));",
-        "output": "O caractere no índice 2 é d"
+        "optionLabel": "um caractere em um índice específico",
+        "description": "Retorna o caractere encontrado em um determinado ídice da string.",
+        "example": "const paragraph = 'Código é poesia';<br> const index = 2;<br>console.log(`O caractere no índice ${index} é ${paragraph.charAt(index)}`);",
+        "output": "\"O caractere no índice 2 é d\""
       },
       "charCodeAt": {
-        "optionLabel": "um código de caractere em um determinado índice",
-        "description": "Retorna um código identificador UTF-16 que representa o caractere em um determinado índice da String",
-        "example": "const sentence = 'Code is poetry';<br>const index = 2;<br>const code = sentence.charCodeAt(index);<br>console.log('O código de caractere  ' + code + ' é igual a ' + sentence.charAt(index));",
-        "output": "O código de caractere 100 é igual a d"
+        "optionLabel": "o código de um caractere em um índice específico",
+        "description": "Retorna um código UTF-16 entre <code>0</code> e <code>65535</code> do caractere no índice especificado.",
+        "example": "const paragraph = 'Código é poesia';<br>const index = 2;<br>const code = paragraph.charCodeAt(index);<br>console.log(`O código ${code} é igual ao caractere ${paragraph.charAt(index)}`);",
+        "output": "\"O código 100 é igual ao caractere d\""
+      },
+      "startWith": {
+        "optionLabel": "if a string starts with specific characters",
+        "description": "Returns <code>true</code> or <code>false</code> if the string starts with given characters.",
+        "example": "const paragraph = 'Code is poetry';<br>console.log(`Starts with Code? ${paragraph.startsWith('Code')}`);<br>console.log(`Starts with Poetry? ${paragraph.startsWith('Poetry')}`);",
+        "output": "\"Starts with Code? true<br>Starts with Poetry? false\""
+      },
+      "endstWith": {
+        "optionLabel": "if a string ends with specific characters",
+        "description": "Returns <code>true</code> or <code>false</code> if the string ends with given characters.",
+        "example": "const paragraph = 'Code is poetry';<br>console.log(`Ends with code? ${paragraph.endsWith('code')}`);<br>console.log(`Ends with poetry? ${paragraph.startsWith('poetry')}`);",
+        "output": "\"Ends with code? false<br>Ends with poetry? false\""
+      }
+    },
+    "findIndex": {
+      "indexOf": {
+        "optionLabel": "the first occurrence of a text",
+        "description": "Returns the index of the first occurrence a given text in the string.",
+        "example": "const paragraph = 'Code is poetry';<br>console.log(`The index of 'o' is ${paragraph.indexOf('o')}`);",
+        "output": "\"The index of 'o' is 1\""
+      },
+      "lastIndexOf": {
+        "optionLabel": "the last occurrence of a text",
+        "description": "Returns the index of the last occurrence a given text in the string.",
+        "example": "const paragraph = 'Code is poetry';<br>console.log(`The last index of 'o' is ${paragraph.lastIndexOf('o')}`);",
+        "output": "\"The last index of 'o' 9\""
+      },
+      "search": {
+        "optionLabel": "the first occurrence of a regular expression",
+        "description": "Returns the character UTF-16 code identifier in a given index of the string.",
+        "example": "const paragraph = 'Code is poetry';<br>const index = 2;<br>const code = paragraph.charCodeAt(index);<br>console.log(`The character code ${code} is equal to ${paragraph.charAt(index)}`);",
+        "output": "\"The character code 100 is equal to d\""
+      },
+      "startWith": {
+        "optionLabel": "if a string starts with specific characters",
+        "description": "Returns <code>true</code> or <code>false</code> if the string starts with given characters.",
+        "example": "const paragraph = 'Code is poetry';<br>console.log(`Starts with Code? ${paragraph.startsWith('Code')}`);<br>console.log(`Starts with Poetry? ${paragraph.startsWith('Poetry')}`);",
+        "output": "\"Starts with Code? true<br>Starts with Poetry? false\""
+      },
+      "endstWith": {
+        "optionLabel": "if a string ends with specific characters",
+        "description": "Returns <code>true</code> or <code>false</code> if the string ends with given characters.",
+        "example": "const paragraph = 'Code is poetry';<br>console.log(`Ends with code? ${paragraph.endsWith('code')}`);<br>console.log(`Ends with poetry? ${paragraph.startsWith('poetry')}`);",
+        "output": "\"Ends with code? false<br>Ends with poetry? false\""
+      }
+    },
+    "add": {
+      "concat": {
+        "optionLabel": "one or more texts to a string",
+        "description": "Returns a new string with the original string concatenated with the given texts.",
+        "example": "const code = 'Code';<br>console.log(code.concat(' is ', 'poetry');",
+        "output": "\"Code is poetry\""
+      },
+      "padStart": {
+        "optionLabel": "the same text repeated at the beginning of a string",
+        "description": "Returns a new string filled with the same text at the beginning of the string until it reaches a given length.",
+        "example": "const lastDigits = '5834';<br>const maskedNumber = lastDigits.padStart(16, '*')<br>console.log(maskedNumber);",
+        "output": "\"************5834\""
+      },
+      "padEnd": {
+        "optionLabel": "the same text repeated at the end of a string",
+        "description": "Returns a new string filled with the same text at the end of the string until it reaches a given length.",
+        "example": "const firstDigits = '0896';<br>const maskedNumber = firstDigits.padEnd(16, '*')<br>console.log(maskedNumber);",
+        "output": "\"0896************\""
+      } 
+    },
+    "remove": {
+      "trim": {
+        "optionLabel": "whitespaces from a string",
+        "description": "Returns a new string with all the whitespaces removed.",
+        "example": "const phoneNumber = ' 12 3456 7890 ';<br>console.log(phoneNumber.trim());",
+        "output": "\"1234567890\""
+      },
+      "trimStart": {
+        "optionLabel": "whitespaces from the beginning of a string",
+        "description": "Returns a new string with all the whitespaces removed from the beginning of the string.",
+        "example": "const text = '  Hello world!  ';<br>console.log(text.trimStart());",
+        "output": "\"Hello world!  \""
+      },
+      "trimEnd": {
+        "optionLabel": "whitespaces from the end of a string",
+        "description": "Returns a new string with all the whitespaces removed from the end of the string.",
+        "example": "const text = '  Hello world!  ';<br>console.log(text.trimEnd());",
+        "output": "\"  Hello world!\""
+      }
+    },
+    "replace": {
+      "replace": {
+        "optionLabel": "the first match of a text or regular expression",
+        "description": "Returns a new string with the first match of a text or regular expression replaced by another given text.",
+        "example": "const paragraph = 'Code is poetry';<br>console.log(paragraph.replace('poetry', 'art');",
+        "output": "\"Code is art\""
+      },
+      "replaceAll": {
+        "optionLabel": "all matches of a text or regular expression",
+        "description": "Returns a new string with all matches of a text or regular expression replaced by another given text.",
+        "example": "const date = '26/01/2021';<br>console.log(paragraph.replaceAll('/', '-');",
+        "output": "\"26-01-2021\""
+      }
+    },
+    "get": {
+      "match": {
+        "optionLabel": "all matches of a regular expression",
+        "description": "Returns an array with all matches of a regular expression in a string.",
+        "example": "const paragraph = 'Code is Poetry';<br>const regex = /[A-Z]/g;<br>console.log(paragraph.match(regex));",
+        "output": "[\"C\", \"P\"]"
+      },
+      "matchAll": {
+        "optionLabel": "all matches of a regular expression, including capturing groups",
+        "description": "Returns an iterator with all matches of a regular expression in a string, including capturing groups.",
+        "example": "const regex = /t(e)(st(\\d?))/g;<br>const str = 'test1test2';<br>const array = [...str.matchAll(regexp)];<br>console.log(array[0]);",
+        "output": "[\"test1\", \"e\", \"st1\", \"1\"]"
+      },
+      "slice": {
+        "optionLabel": "a section of the string starting at a given index",
+        "description": "Returns a new string with all the text between the given indexes.",
+        "example": "const paragraph = 'Code is poetry';<br>console.log(`example 1: ${paragraph.slice(6)}`);<br>console.log(`example 2: ${paragraph.slice(0, 3)}`);<br>console.log(`example 3: ${paragraph.slice(-6)}`);",
+        "output": "\"example 1: is poetry\"\n\"example 2: Code\"\n\"example 3: poetry\""
+      },
+      "substring": {
+        "optionLabel": "a section of the string between two indexes",
+        "description": "Returns a new string with all the text between the two given indexes.",
+        "example": "const paragraph = 'Code is poetry';<br>console.log(`example 1: ${paragraph.slice(0, 6)}`);<br>console.log(`example 2: ${paragraph.slice(5)}`);",
+        "output": "\"example 1: Code is\"\n\"example 2: is poetry\""
       }
     },
     "modify": {
-      "replace": {
-        "optionLabel": "substituindo a primeira ocorrência de um padrão/termo com outro termo",
-        "description": "Retorna uma nova String com a primeira ocorrência do padrão/termo substituída por outro termo",
-        "example": "const sentence = 'Code is poetry';<br>const newSentence = sentence.replace('poetry', 'art');<br>console.log(newSentence);",
-        "output": "Code is art"
+      "toUpperCase": {
+        "optionLabel": "convert all text to uppercase",
+        "description": "Returns a new string with all text converted to uppercase.",
+        "example": "const hello = 'Hello World!';<br>console.log(hello.toUpperCase());",
+        "output": "\"HELLO WORLD!\""
+      },
+      "toLowerCase": {
+        "optionLabel": "convert all text to lowercase",
+        "description": "Returns a new string with all text converted to lowercase.",
+        "example": "const hello = 'Hello World!';<br>console.log(hello.toUpperCase());",
+        "output": "\"hello world!\""
+      },
+      "repeat": {
+        "optionLabel": "repeat the string a number of times",
+        "description": "Returns a new string with the original text repeated a given number of times.",
+        "example": "const abc = 'Abc';<br>console.log(abc.repeat(3));",
+        "output": "\"AbcAbcAbc\""
       }
+    },
+    "split": {
+      "optionLabel": "divide the string with a given separator",
+      "description": "Returns a list of substrings found between a given separator.",
+      "example": "const date = '26/01/2021';<br>const dateArr = date.split('/');<br>console.log(dateArr);",
+      "output": "[\"26\", \"01\", \"2021\"]"
     }
   }
 }
