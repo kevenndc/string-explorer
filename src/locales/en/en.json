@@ -41,9 +41,9 @@
       },
       "codePointAt": {
         "optionLabel": "a character unicode number in a given index",
-        "description": "Returns the character UTF-16 code identifier in a given index of the string.",
-        "example": "const hello = 'Hello world! 😎';<br>console.log(`The code ${hello.codePointAt(4)} is equal to the character ${hello.charAt(4)}`);<br>console.log(`The code of 😎 is ${hello.codePointAt(13)}`)",
-        "output": "\"The code 111 is equal to the character o\"<br>\"The code of 😎 is 128526\""
+        "description": "Returns the character unicode identifier in a given index of the string.",
+        "example": "const hello = 'Hello world! 😎';<br>console.log(`The code ${hello.codePointAt(4))} is equal to the character ${hello.charAt(4)}`);<br>console.log(`The code of the emoji 😎 is ${hello.codePointAt(13)}`)",
+        "output": "\"The code 111 is equal to the character o\"<br>\"The code of the emoji 😎 is 128526\""
       }
     },
     "findIndex": {
@@ -56,14 +56,14 @@
       "lastIndexOf": {
         "optionLabel": "where is the last occurrence of a text",
         "description": "Returns the index of the last occurrence a given text in the string.",
-        "example": "const paragraph = 'Code is poetry';<br>console.log(`The last index of 'o' is ${paragraph.lastIndexOf('o')}`);",
-        "output": "\"The last index of 'o' 9\""
+        "example": "const paragraph = 'Code is poetry';<br>console.log(`The last occurrence of the letter 'o' is on index ${paragraph.lastIndexOf('o')}`);",
+        "output": "\"The last occurrence of the letter 'o' is on index 9\""
       },
       "search": {
-        "optionLabel": "where is the first occurrence of a regular expression",
-        "description": "Returns the character UTF-16 code identifier in a given index of the string.",
-        "example": "const paragraph = 'Code is poetry';<br>const index = 2;<br>const code = paragraph.charCodeAt(index);<br>console.log(`The character code ${code} is equal to ${paragraph.charAt(index)}`);",
-        "output": "\"The character code 100 is equal to d\""
+        "optionLabel": "where is the occurrence of a regular expression",
+        "description": "Returns the occurrence of a regular expression on a string.",
+        "example": "const paragraph = 'items: item1 item2 item3';<br>console.log(`first item starting index: paragraph.search(/item[1-9]/g)`);",
+        "output": "\"first item starting index: 6\""
       },
       "startsWith": {
         "optionLabel": "if a string starts with specific characters",

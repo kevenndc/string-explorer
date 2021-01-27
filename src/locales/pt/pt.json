@@ -7,7 +7,7 @@
       },
       "findIndex": {
         "optionLabel": "encontrar onde está um texto específico na string",
-        "selectedLabel": "I have a text and want to find out"
+        "selectedLabel": "Eu tenho um texto e quero encontrar"
       },
       "add": {
         "optionLabel": "adicionar algo",
@@ -40,29 +40,29 @@
         "output": "\"O caractere no índice 2 é d\""
       },
       "codePointAt": {
-        "optionLabel": "a character unicode number in a given index",
-        "description": "Returns the character UTF-16 code identifier in a given index of the string.",
-        "example": "const hello = 'Hello world! 😎';<br>console.log(`The code ${hello.codePointAt(4)} is equal to the character ${hello.charAt(4)}`);<br>console.log(`The code of 😎 is ${hello.codePointAt(13)}`)",
-        "output": "\"The code 111 is equal to the character o\"<br>\"The code of 😎 is 128526\""
+        "optionLabel": "um código unicode de um caractere em um índice específico",
+        "description": "Retorna o código unicode de um caractere em um índice específico.",
+        "example": "const hello = 'Olá mundo! 😎';<br>console.log(`O código ${hello.codePointAt(1))} é igual ao caractere ${hello.charAt(1)}`);<br>console.log(`o código do emoji 😎 é ${hello.codePointAt(12)}`)",
+        "output": "\"O código 108 é igual ao caractere l\"<br>\"O código do emoji 😎 é 128526\""
       }
     },
     "findIndex": {
       "indexOf": {
-        "optionLabel": "where is the first occurrence of a text",
-        "description": "Returns the index of the first occurrence a given text in the string.",
-        "example": "const paragraph = 'Code is poetry';<br>console.log(`The index of 'o' is ${paragraph.indexOf('o')}`);",
-        "output": "\"The index of 'o' is 1\""
+        "optionLabel": "onde está a primeira ocorrência do texto",
+        "description": "Retorna o índice da primeira ocorrência de um determinado texto em uma string.",
+        "example": "const paragraph = 'Código é poesia';<br>console.log(`O índice de 'ó' é ${paragraph.indexOf('ó')}`);",
+        "output": "\"O índice de 'ó' é 1\""
       },
       "lastIndexOf": {
-        "optionLabel": "where is the last occurrence of a text",
-        "description": "Returns the index of the last occurrence a given text in the string.",
-        "example": "const paragraph = 'Code is poetry';<br>console.log(`The last index of 'o' is ${paragraph.lastIndexOf('o')}`);",
-        "output": "\"The last index of 'o' 9\""
+        "optionLabel": "onde está a última ocorrência do texto",
+        "description": "Retorna o índice da última ocorrência de um determinado texto em uma string.",
+        "example": "const paragraph = 'Código é poesia';<br>console.log(`A última ocorrência da letra 'o' está no índice ${paragraph.lastIndexOf('o')}`);",
+        "output": "\"A última ocorrência da letra 'o' está no índice 10\""
       },
       "search": {
-        "optionLabel": "where is the first occurrence of a regular expression",
-        "description": "Returns the character UTF-16 code identifier in a given index of the string.",
-        "example": "const paragraph = 'Code is poetry';<br>const index = 2;<br>const code = paragraph.charCodeAt(index);<br>console.log(`The character code ${code} is equal to ${paragraph.charAt(index)}`);",
+        "optionLabel": "onde está a ocorrência de uma expressão regular",
+        "description": "Retorna a ocorrência de uma expressão regular na string.",
+        "example": "const paragraph = 'Código é poesia';<br>const index = 2;<br>const code = paragraph.charCodeAt(index);<br>console.log(`The character code ${code} is equal to ${paragraph.charAt(index)}`);",
         "output": "\"The character code 100 is equal to d\""
       },
       "startsWith": {
