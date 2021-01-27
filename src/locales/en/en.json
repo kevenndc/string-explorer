@@ -39,11 +39,11 @@
         "example": "const paragraph = 'Code is poetry';<br> const index = 2;<br>console.log(`The character at index ${index} is ${paragraph.charAt(index)}`);",
         "output": "\"The character at index 2 is d\""
       },
-      "charCodeAt": {
-        "optionLabel": "a character code in a given index",
-        "description": "Returns the character UTF-16 code identifier between <code>0</code> and <code>65535</code> in a given index of the string.",
-        "example": "const paragraph = 'Code is poetry';<br>const index = 2;<br>const code = paragraph.charCodeAt(index);<br>console.log(`The code ${code} is equal to the character ${paragraph.charAt(index)}`);",
-        "output": "\"The code 100 is equal to the character d\""
+      "codePointAt": {
+        "optionLabel": "a character unicode number in a given index",
+        "description": "Returns the character UTF-16 code identifier in a given index of the string.",
+        "example": "const hello = 'Hello world! 😎';<br>console.log(`The code ${hello.codePointAt(4)} is equal to the character ${hello.charAt(4)}`);<br>console.log(`The code of 😎 is ${hello.codePointAt(13)}`)",
+        "output": "\"The code 111 is equal to the character o\"<br>\"The code of 😎 is 128526\""
       }
     },
     "findIndex": {
@@ -183,6 +183,12 @@
         "example": "const date = '26/01/2021';<br>const dateArr = date.split('/');<br>console.log(dateArr);",
         "output": "[\"26\", \"01\", \"2021\"]"
       },
+      "fromCodePoint": {
+        "optionLabel": "convert unicode numbers into a string",
+        "description": "Returns a string created by using the specified sequence of code points.",
+        "example": "console.log(String.fromCodePoint(72, 101, 108, 108, 111, 33, 129312));",
+        "output": "[\"Hello!🤠\"]"
+      },
       "toUpperCase": {
         "optionLabel": "convert all text to uppercase",
         "description": "Returns a new string with all text converted to uppercase.",
@@ -198,4 +204,3 @@
     }
   }
 }
-
