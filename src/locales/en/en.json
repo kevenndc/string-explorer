@@ -1,5 +1,6 @@
 {
   "labels": {
+    "firstSelectLabel": "I have a string, I would like to",
     "methodCategories": {
       "findChar": {
         "optionLabel": "find something in a specific index",

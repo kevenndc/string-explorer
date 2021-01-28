@@ -1,17 +1,22 @@
 <template>
+<div>
+  <locale-switcher />
   <main>
     <h1>JavaScript String Explorer</h1>
     <method-type :number="10"></method-type>
   </main>
+</div>
 </template>
 
 <script>
 import MethodType from './components/MethodType.vue';
+import LocaleSwitcher from './components/LocaleSwitcher.vue';
 
 export default {
   name: "App",
   components: {
     MethodType,
+    LocaleSwitcher,
   },
 };
 </script>
