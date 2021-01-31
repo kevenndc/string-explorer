@@ -1,7 +1,11 @@
 {
+  "meta": {
+    "longName": "English",
+    "author": "kevenndc"
+  },
   "labels": {
     "firstSelectLabel": "I have a string, I would like to",
-    "methodCategories": {
+    "methodTypes": {
       "findChar": {
         "optionLabel": "find something in a specific index",
         "selectedLabel": "I have an index and want to find"

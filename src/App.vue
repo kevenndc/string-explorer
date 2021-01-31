@@ -3,7 +3,7 @@
   <locale-switcher />
   <main>
     <h1>JavaScript String Explorer</h1>
-    <method-type :number="10"></method-type>
+    <method-type></method-type>
   </main>
 </div>
 </template>
