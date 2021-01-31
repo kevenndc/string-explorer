@@ -1,7 +1,8 @@
 <template>
   <div>
     <label for="method-type">{{ $t("labels.firstSelectLabel") }}</label>
-    <select name="method-type" id="method-type">
+    <select name="method-type" id="method-type" @change="setMethodType">
+      <option value="">...</option>
       <option
         v-for="methodType in methodTypes"
         :key="methodType"
@@ -28,6 +29,11 @@ export default {
     return {
       methodTypes,
     };
+  },
+  methods: {
+    setMethodType(e) {
+      console.log(e.target.value);
+    },
   },
 };
 </script>

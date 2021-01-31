@@ -7,6 +7,12 @@ import store from "./store";
 import en from './locales/en/en.json';
 import pt from './locales/pt/pt.json';
 
+function loadLocaleMessages() {
+  const locales = require.context('./locales', true, /[a-z]{2}\.json$/i);
+  console.log(locales.keys());
+}
+
+loadLocaleMessages();
 
 // Sets all translations into a Map wich will be used to 
 const locales = new Map()
@@ -14,8 +20,6 @@ const locales = new Map()
                 .set('pt', pt)
 
 const messages = Object.fromEntries(locales);
-
-console.log(getStartLocale());
 
 const i18n = createI18n({
   locale: getStartLocale(),
