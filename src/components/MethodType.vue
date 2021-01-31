@@ -1,7 +1,7 @@
 <template>
   <div>
     <label for="method-type">{{ $t("labels.firstSelectLabel") }}</label>
-    <select name="method-type" id="method-type" @change="setMethodType">
+    <select class="method-type" name="method-type" id="method-type" @change="setMethodType">
       <option value="">...</option>
       <option
         v-for="methodType in methodTypes"
@@ -37,3 +37,8 @@ export default {
   },
 };
 </script>
+<style scoped>
+  .method-type {
+    margin-left: 5px;
+  }
+</style>

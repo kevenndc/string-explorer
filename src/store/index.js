@@ -3,13 +3,19 @@ import { createStore } from "vuex";
 // initialize the vuex store using the vuex module.
 createStore({
   state: {
-    selectedMethod: undefined,
-    currentLang: 'en'
+    selectedType: undefined,
+    selectedMethod: undefined
+  },
+  getters: {
+    selectedType: state   => state.selectedType,
+    selectedMethod: state => state.selectedMethod,
   },
   mutations: {
-    changeLang(state, newLang) {
-      state.currentLang = newLang;
+    setSelectedType(state, methodType) {
+      state.selectedType = methodType;
+    },
+    setSelectedMethod(state, method) {
+      state.selectedMethod = method;
     }
-  },
-  actions: {},
+  }
 });
