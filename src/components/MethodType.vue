@@ -1,8 +1,8 @@
 <template>
   <div>
     <label for="method-type">{{ $t("labels.firstSelectLabel") }}</label>
-    <select class="method-type" name="method-type" id="method-type" @change="setMethodType">
-      <option value="">...</option>
+    <select class="method-type" name="method-type" id="method-type" v-model="selectedType">
+      <option value="" disabled selected>...</option>
       <option
         v-for="methodType in methodTypes"
         :key="methodType"
@@ -31,9 +31,15 @@ export default {
       methodTypes,
     };
   },
-  methods: {
-    setMethodType(e) {
-      this.$store.commit('setSelectedType', e.target.value);
+  data() {
+    return {
+      selectedType: ''
+    }
+  },
+  watch: {
+    selectedType() {
+      this.$store.commit('setSelectedType', this.selectedType);
+      //console.log(this.$store.getters.selectedType);
     },
   },
 };
