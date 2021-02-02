@@ -15,6 +15,7 @@
 </template>
 <script>
 import { useI18n } from "vue-i18n";
+
 export default {
   setup() {
     /**
@@ -32,7 +33,7 @@ export default {
   },
   methods: {
     setMethodType(e) {
-      console.log(e.target.value);
+      this.$store.commit('setSelectedType', e.target.value);
     },
   },
 };
