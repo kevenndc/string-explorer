@@ -11,6 +11,7 @@
 <script>
 import LocaleSwitcher from './components/LocaleSwitcher.vue';
 import MethodSelect from './components/MethodSelect.vue';
+import { useI18n } from "vue-i18n";
 
 export default {
   name: "App",
@@ -19,6 +20,15 @@ export default {
     MethodSelect,
   },
 
+  setup() {
+    const { getLocaleMessage, locale } = useI18n();
+    console.log(locale.value);
+    const messages = getLocaleMessage(locale.value);
+
+    return {
+      messages
+    }
+  }
 };
 </script>
 

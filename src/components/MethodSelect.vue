@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!-- Method Type Select -->
     <div>
       <label for="method-type">{{ $t("labels.firstSelectLabel") }}</label>
       <select class="method-type" name="method-type" id="method-type" v-model="selectedType">
@@ -13,13 +14,15 @@
         </option>
       </select>
     </div>
-    
+    <!-- END of Method Type Select -->
+
+    <!-- Method Select -->
     <div v-if="selectedType">
       <label for="method-choice">{{ $t(`labels.methodTypes.${selectedType}.selectedLabel`) }}</label>
       <select name="method-choice" id="method-choice">
         <option value="" disabled selected>...</option>
         <option
-          v-for="method in currentTypeMethods"
+          v-for="method in getSelectedTypeMethods()"
           :value="method"
           :key="method"
         >
@@ -27,6 +30,7 @@
         </option>
       </select>
     </div>
+    <!-- END of Method Select -->
   </div>
 </template>
 <script>
@@ -41,33 +45,33 @@ export default {
      */
     const { getLocaleMessage, locale } = useI18n();
     const messages = getLocaleMessage(locale.value);
+    const methodTypes = Object.keys(messages.labels.methodTypes);
 
     return {
       messages,
+      methodTypes,
     };
   },
 
   data() {
     return {
       selectedType: '',
-      methodTypes: this.getMethodTypes(),
-      currentTypeMethods: ''
+      selectedMethod: ''
     }
   },
 
   watch: {
     selectedType() {
       this.$store.commit('setSelectedType', this.selectedType);
-      this.currentTypeMethods = this.getSelectedTypeMethods();
     },
+    selectedMethod() {
+      this.$store.commit('setSelectedMethod', this.selectedMethod);
+    }
   },
 
   methods: {
-    getMethodTypes() {
-      return Object.keys(this.messages.labels.methodTypes);
-    } ,
     getSelectedTypeMethods() {
-      return Object.keys(this.messages.methods[this.$store.getters.selectedType]);
+      return Object.keys(this.messages.methods[this.selectedType]);
     }
   }
 };
