@@ -18,11 +18,13 @@
       <label for="method-choice">{{ $t(`labels.methodTypes.${selectedType}.selectedLabel`) }}</label>
       <select name="method-choice" id="method-choice">
         <option value="" disabled selected>...</option>
-        <!-- <option
-          v-for=""
+        <option
+          v-for="method in currentTypeMethods"
+          :value="method"
+          :key="method"
         >
-
-        </option> -->
+          {{ $t(`methods.${selectedType}.${method}.optionLabel`) }}
+        </option>
       </select>
     </div>
   </div>
@@ -48,21 +50,25 @@ export default {
   data() {
     return {
       selectedType: '',
-      methodTypes: this.getMethodTypes()
+      methodTypes: this.getMethodTypes(),
+      currentTypeMethods: ''
     }
   },
 
   watch: {
     selectedType() {
       this.$store.commit('setSelectedType', this.selectedType);
-      //console.log(this.$store.getters.selectedType);
+      this.currentTypeMethods = this.getSelectedTypeMethods();
     },
   },
 
   methods: {
     getMethodTypes() {
       return Object.keys(this.messages.labels.methodTypes);
-    } 
+    } ,
+    getSelectedTypeMethods() {
+      return Object.keys(this.messages.methods[this.$store.getters.selectedType]);
+    }
   }
 };
 </script>

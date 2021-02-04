@@ -12,7 +12,7 @@
       },
       "findIndex": {
         "optionLabel": "encontrar onde está um texto específico na string",
-        "selectedLabel": "Eu tenho um texto e quero encontrar"
+        "selectedLabel": "Eu tenho um texto e quero saber"
       },
       "add": {
         "optionLabel": "adicionar algo",
