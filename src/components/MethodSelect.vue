@@ -3,7 +3,7 @@
     <!-- Method Type Select -->
     <div>
       <label for="method-type">{{ $t("labels.firstSelectLabel") }}</label>
-      <select class="method-type" name="method-type" id="method-type" v-model="selectedType">
+      <select class="method-select" name="method-type" id="method-type" v-model="selectedType">
         <option value="" disabled selected>...</option>
         <option
           v-for="methodType in methodTypes"
@@ -19,7 +19,7 @@
     <!-- Method Select -->
     <div v-if="selectedType">
       <label for="method-choice">{{ $t(`labels.methodTypes.${selectedType}.selectedLabel`) }}</label>
-      <select name="method-choice" id="method-choice">
+      <select class="method-select" name="method-choice" id="method-choice" v-model="selectedMethod">
         <option value="" disabled selected>...</option>
         <option
           v-for="method in getSelectedTypeMethods()"

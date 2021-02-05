@@ -4,29 +4,27 @@
   <main>
     <h1>JavaScript String Explorer</h1>
     <method-select></method-select>
+    <method-description v-if="hasSelectedMethod()"></method-description>
   </main>
 </div>
 </template>
 
 <script>
 import LocaleSwitcher from './components/LocaleSwitcher.vue';
+import MethodDescription from './components/MethodDescription.vue';
 import MethodSelect from './components/MethodSelect.vue';
-import { useI18n } from "vue-i18n";
 
 export default {
   name: "App",
   components: {
     LocaleSwitcher,
     MethodSelect,
+    MethodDescription,
   },
 
-  setup() {
-    const { getLocaleMessage, locale } = useI18n();
-    console.log(locale.value);
-    const messages = getLocaleMessage(locale.value);
-
-    return {
-      messages
+  methods: {
+    hasSelectedMethod() {
+      return this.$store.getters.selectedMethod !== undefined;
     }
   }
 };

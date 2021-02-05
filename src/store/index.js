@@ -4,11 +4,13 @@ import { createStore } from "vuex";
 export default createStore({
   state: {
     selectedType: undefined,
-    selectedMethod: undefined
+    selectedMethod: undefined,
+    selectedPath: ''
   },
   getters: {
     selectedType: state   => state.selectedType,
     selectedMethod: state => state.selectedMethod,
+    selectedPath: state => state.selectedMethod,
   },
   mutations: {
     setSelectedType(state, methodType) {
@@ -16,6 +18,9 @@ export default createStore({
     },
     setSelectedMethod(state, method) {
       state.selectedMethod = method;
+    },
+    setSelectedPath(state, path) {
+      state.selectedPath = path;
     }
   }
 });
