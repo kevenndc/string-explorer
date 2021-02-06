@@ -33,18 +33,25 @@
     <!-- END of Method Select -->
 
     <!-- Method Description -->
-    <method-description v-if="selectedMethod" :methodName="selectedMethod" :methodPath="methodPath">
+    <method-description 
+      v-if="selectedMethod" 
+      :methodName="selectedMethod" 
+      :methodPath="methodPath"
+    >
     </method-description>
     <!-- END of Method Description -->
+
+    <method-example v-if="selectedMethod" :methodPath="methodPath"></method-example>
 
   </div>
 </template>
 <script>
 import { useI18n } from "vue-i18n";
 import MethodDescription from './MethodDescription.vue';
+import MethodExample from './MethodExample.vue';
 
 export default {
-  components: { MethodDescription },
+  components: { MethodDescription, MethodExample },
   setup() {
     /**
      * Get all the MethodTypes keys to list them as options for this component
