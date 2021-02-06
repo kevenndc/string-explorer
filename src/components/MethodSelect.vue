@@ -31,12 +31,20 @@
       </select>
     </div>
     <!-- END of Method Select -->
+
+    <!-- Method Description -->
+    <method-description v-if="selectedMethod" :methodName="selectedMethod" :methodPath="methodPath">
+    </method-description>
+    <!-- END of Method Description -->
+
   </div>
 </template>
 <script>
 import { useI18n } from "vue-i18n";
+import MethodDescription from './MethodDescription.vue';
 
 export default {
+  components: { MethodDescription },
   setup() {
     /**
      * Get all the MethodTypes keys to list them as options for this component
@@ -72,6 +80,12 @@ export default {
   methods: {
     getSelectedTypeMethods() {
       return Object.keys(this.messages.methods[this.selectedType]);
+    }
+  },
+
+  computed: {
+    methodPath() {
+      return `methods.${this.selectedType}.${this.selectedMethod}`
     }
   }
 };

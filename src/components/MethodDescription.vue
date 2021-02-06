@@ -1,21 +1,20 @@
 <template>
   <div>
     <h2>
-      <span v-if="method === 'fromCodePoint'">String.</span>
-      <span v-else>str.</span>{{method}}()
+      <span v-if="methodName === 'fromfromCodePoint'">String.{{methodName}}</span>
+      <span v-else>str.{{methodName}}</span>
     </h2>
-    <p>{{ $t(`methods.${methodType}.${method}.description`) }}</p>
+    <p v-html="$t(`${methodPath}.description`)"></p>
+    <a :href="`https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/${methodName}`" target="_blank">
+      {{ $t('labels.seeDocs') }} &#8594;
+    </a>
   </div>
 </template>
 <script>
 export default {
-  computed: {
-    methodType() {
-      return this.$store.state.selectedType;
-    },
-    method() {
-      return this.$store.state.selectedMethod;
-    }
+  props: {
+    methodName: String,
+    methodPath: String
   }
 }
 </script>

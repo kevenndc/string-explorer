@@ -5,6 +5,7 @@
   },
   "labels": {
     "firstSelectLabel": "I have a string, I would like to",
+    "seeDocs": "see the docs",
     "methodTypes": {
       "findChar": {
         "optionLabel": "find something in a specific index",
@@ -18,7 +19,7 @@
         "optionLabel": "add something",
         "selectedLabel": "I want to add"
       },
-      "remove": {
+      "remove": { 
         "optionLabel": "remove something",
         "selectedLabel": "I want to remove"
       },

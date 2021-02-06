@@ -4,14 +4,12 @@
   <main>
     <h1>JavaScript String Explorer</h1>
     <method-select></method-select>
-    <method-description v-if="hasSelectedMethod()"></method-description>
   </main>
 </div>
 </template>
 
 <script>
 import LocaleSwitcher from './components/LocaleSwitcher.vue';
-import MethodDescription from './components/MethodDescription.vue';
 import MethodSelect from './components/MethodSelect.vue';
 
 export default {
@@ -19,14 +17,8 @@ export default {
   components: {
     LocaleSwitcher,
     MethodSelect,
-    MethodDescription,
   },
 
-  methods: {
-    hasSelectedMethod() {
-      return this.$store.getters.selectedMethod !== undefined;
-    }
-  }
 };
 </script>
 
