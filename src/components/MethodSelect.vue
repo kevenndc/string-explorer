@@ -78,15 +78,22 @@ export default {
   watch: {
     selectedType() {
       this.$store.commit('setSelectedType', this.selectedType);
+      this.resetSelectedMethod();
     },
     selectedMethod() {
+      const path = `methods.${this.selectedType}.${this.selectedMethod}`;
       this.$store.commit('setSelectedMethod', this.selectedMethod);
+      this.$store.commit('setSelectedPath', path);
     }
   },
 
   methods: {
     getSelectedTypeMethods() {
       return Object.keys(this.messages.methods[this.selectedType]);
+    },
+    resetSelectedMethod() {
+      this.selectedMethod = '';
+      this.$store.commit('resetSelectedMethod');
     }
   },
 

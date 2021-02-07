@@ -8,9 +8,9 @@ export default createStore({
     selectedPath: ''
   },
   getters: {
-    selectedType: state   => state.selectedType,
+    selectedType:   state => state.selectedType,
     selectedMethod: state => state.selectedMethod,
-    selectedPath: state => state.selectedMethod,
+    selectedPath:   state => state.selectedPath,
   },
   mutations: {
     setSelectedType(state, methodType) {
@@ -21,6 +21,9 @@ export default createStore({
     },
     setSelectedPath(state, path) {
       state.selectedPath = path;
+    },
+    resetSelectedMethod(state) {
+      state.selectedMethod = undefined
     }
   }
 });
