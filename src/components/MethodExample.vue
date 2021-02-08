@@ -35,3 +35,8 @@ export default {
   }
 }
 </script>
+<style scoped>
+code[class*="language-"], pre[class*="language-"] {
+  white-space: pre-line;
+}
+</style>
