@@ -3,20 +3,20 @@
   <locale-switcher />
   <main>
     <h1>JavaScript String Explorer</h1>
-    <method-select></method-select>
+    <method-primary></method-primary>
   </main>
 </div>
 </template>
 
 <script>
 import LocaleSwitcher from './components/LocaleSwitcher.vue';
-import MethodSelect from './components/MethodSelect.vue';
+import MethodPrimary from './components/MethodPrimary.vue';
 
 export default {
   name: "App",
   components: {
     LocaleSwitcher,
-    MethodSelect,
+    MethodPrimary,
   },
 
 };
