@@ -28,85 +28,85 @@
         "selectedLabel": "eu quero substituir"
       },
       "get": {
-        "optionLabel": "eu quero obter uma parte dela",
+        "optionLabel": "obter uma parte dela",
         "selectedLabel": "Eu quero obter"
       },
-      "other": {
-        "optionLabel": "fazer outra coisa",
-        "selectedLabel": "Eu quero"
+      "convert": {
+        "optionLabel": "converter",
+        "selectedLabel": "Eu quero converter"
       }
     }
   },
   "methods": {
     "findChar": {
-      "chatAt": {
+      "charAt": {
         "optionLabel": "um caractere em um índice específico",
         "description": "Retorna o caractere encontrado em um determinado ídice da string.",
-        "example": "const paragraph = 'Código é poesia';\nconst index = 2;\nconsole.log(`O caractere no índice ${index} é ${paragraph.charAt(index)}`);",
+        "example": "const paragraph = 'Código é poesia'; \n const index = 2; \n console.log(`O caractere no índice ${index} é ${paragraph.charAt(index)}`);",
         "output": "\"O caractere no índice 2 é d\""
       },
       "codePointAt": {
         "optionLabel": "um código unicode de um caractere em um índice específico",
         "description": "Retorna o código unicode de um caractere em um índice específico.",
-        "example": "const hello = 'Olá mundo! 😎';\nconsole.log(`O código ${hello.codePointAt(1))} é igual ao caractere ${hello.charAt(1)}`);\nconsole.log(`o código do emoji 😎 é ${hello.codePointAt(12)}`)",
-        "output": "\"O código 108 é igual ao caractere l\"\n\"O código do emoji 😎 é 128526\""
+        "example": "const hello = 'Olá mundo! 😎'; \n console.log(`O código ${hello.codePointAt(1))} é igual ao caractere ${hello.charAt(1)}`); \n console.log(`o código do emoji 😎 é ${hello.codePointAt(12)}`)",
+        "output": "\"O código 108 é igual ao caractere l\" \n \"O código do emoji 😎 é 128526\""
       }
     },
     "findIndex": {
       "indexOf": {
         "optionLabel": "onde está a primeira ocorrência do texto",
         "description": "Retorna o índice da primeira ocorrência de um determinado texto em uma string.",
-        "example": "const paragraph = 'Código é poesia';\nconsole.log(`O índice de 'ó' é ${paragraph.indexOf('ó')}`);",
+        "example": "const paragraph = 'Código é poesia'; \n console.log(`O índice de 'ó' é ${paragraph.indexOf('ó')}`);",
         "output": "\"O índice de 'ó' é 1\""
       },
       "lastIndexOf": {
         "optionLabel": "onde está a última ocorrência do texto",
         "description": "Retorna o índice da última ocorrência de um determinado texto em uma string.",
-        "example": "const paragraph = 'Código é poesia';\nconsole.log(`A última ocorrência da letra 'o' está no índice ${paragraph.lastIndexOf('o')}`);",
+        "example": "const paragraph = 'Código é poesia'; \n console.log(`A última ocorrência da letra 'o' está no índice ${paragraph.lastIndexOf('o')}`);",
         "output": "\"A última ocorrência da letra 'o' está no índice 10\""
       },
       "search": {
         "optionLabel": "onde está a ocorrência de uma expressão regular",
         "description": "Retorna o primeiro índice da ocorrência de uma expressão regular na string.",
-        "example": "const paragraph = 'itens: item1 item2 item3';\nconsole.log(`índice inicial do primeiro item: paragraph.search(/item[1-9]/g)`);",
+        "example": "const paragraph = 'itens: item1 item2 item3'; \n console.log(`índice inicial do primeiro item: paragraph.search(/item[1-9]/g)`);",
         "output": "\"índice inicial do primeiro item: 6\""
       },
       "startsWith": {
         "optionLabel": "se uma string começa com caracteres expecíficos",
         "description": "Retorna <code>true</code> ou <code>false</code> se uma string começar com os caracteres determinados.",
-        "example": "const paragraph = 'Código é poesia';\nconsole.log(`Começa com Código? ${paragraph.startsWith('Código')}`);\nconsole.log(`Começa com poesia? ${paragraph.startsWith('poesia')}`);",
-        "output": "\"Começa com Código? true\"\n\"Começa com poesia? false\""
+        "example": "const paragraph = 'Código é poesia'; \n console.log(`Começa com Código? ${paragraph.startsWith('Código')}`); \n console.log(`Começa com poesia? ${paragraph.startsWith('poesia')}`);",
+        "output": "\"Começa com Código? true\" \n \"Começa com poesia? false\""
       },
-      "endstWith": {
+      "endsWith": {
         "optionLabel": "se uma string termina com caracteres específicos",
         "description": "Retorna <code>true</code> ou <code>false</code> se uma string terminar com os caracteres determinados.",
-        "example": "const paragraph = 'Código é poesia';\nconsole.log(`Termina com código? ${paragraph.endsWith('código')}`);\nconsole.log(`Termina com poesia? ${paragraph.endsWith('poesia')}`);",
-        "output": "\"Termina com código? false\"\n\"Termina com poesia? true\""
+        "example": "const paragraph = 'Código é poesia'; \n console.log(`Termina com código? ${paragraph.endsWith('código')}`); \n console.log(`Termina com poesia? ${paragraph.endsWith('poesia')}`);",
+        "output": "\"Termina com código? false\" \n \"Termina com poesia? true\""
       }
     },
     "add": {
       "concat": {
         "optionLabel": "um ou mais textos à string",
         "description": "Retorna uma nova string com o texto da string original concatenado com os textos especificados.",
-        "example": "const code = 'Código';\nconsole.log(code.concat(' é ', 'poesia');",
+        "example": "const code = 'Código'; \n console.log(code.concat(' é ', 'poesia');",
         "output": "\"Código é poesia\""
       },
       "repeat": {
         "optionLabel": "cópias repetidas da mesma string",
         "description": "Retorna uma nova string com o texto original da string repetido um número específico de vezes.",
-        "example": "const abc = 'Abc';\nconsole.log(abc.repeat(3));",
+        "example": "const abc = 'Abc'; \n console.log(abc.repeat(3));",
         "output": "\"AbcAbcAbc\""
       },
       "padStart": {
         "optionLabel": "um mesmo texto se repetindo no início da string",
         "description": "Retorna uma nova string com um mesmo texto se repetindo no início da string até ela atingir um tamanho limite específico.",
-        "example": "const lastDigits = '5834';\nconst maskedNumber = lastDigits.padStart(16, '*')\nconsole.log(maskedNumber);",
+        "example": "const lastDigits = '5834'; \n const maskedNumber = lastDigits.padStart(16, '*') \n console.log(maskedNumber);",
         "output": "\"************5834\""
       },
       "padEnd": {
         "optionLabel": "m mesmo texto se repetindo no final",
         "description": "Retorna uma nova string com um mesmo texto se repetindo no final da string até ela atingir um tamanho limite específico.",
-        "example": "const firstDigits = '0896';\nconst maskedNumber = firstDigits.padEnd(16, '*')\nconsole.log(maskedNumber);",
+        "example": "const firstDigits = '0896'; \n const maskedNumber = firstDigits.padEnd(16, '*') \n console.log(maskedNumber);",
         "output": "\"0896************\""
       } 
     },
@@ -114,31 +114,31 @@
       "trim": {
         "optionLabel": "todos os espaços em branco da string",
         "description": "Retorna uma nova string com todos os espaços em branco removidos.",
-        "example": "const phoneNumber = ' 12 3456 7890 ';\nconsole.log(phoneNumber.trim());",
+        "example": "const phoneNumber = ' 12 3456 7890 '; \n console.log(phoneNumber.trim());",
         "output": "\"1234567890\""
       },
       "trimStart": {
         "optionLabel": "todos os espaços em branco do início da string",
         "description": "Retorna uma nova string com todos os espaços em branco do ínicio.",
-        "example": "const text = '  Olá mundo!  ';\nconsole.log(text.trimStart());",
+        "example": "const text = '  Olá mundo!  '; \n console.log(text.trimStart());",
         "output": "\"Olá mundo!  \""
       },
       "trimEnd": {
         "optionLabel": "todos os espaços em branco do final da string",
         "description": "Retorna uma nova string com todos os espaços em branco do final",
-        "example": "const text = '  Olá mundo!  ';\nconsole.log(text.trimEnd());",
+        "example": "const text = '  Olá mundo!  '; \n console.log(text.trimEnd());",
         "output": "\"  Olá mundo!\""
       },
       "replace": {
         "optionLabel": "a primeira ocorrência de um texto ou expressão regular",
         "description": "Retorna uma nova string com a primeira ocorrência de um texto ou expressão regular substituída por outro texto específico. Esse método também pode ser usado para remover a ocorrência ao passar uma string vazia para substituí-la.",
-        "example": "const paragraph = 'Olá mundo!';\nconsole.log(paragraph.replace(' mundo', '');",
+        "example": "const paragraph = 'Olá mundo!'; \n console.log(paragraph.replace(' mundo', '');",
         "output": "\"Olá!\""
       },
       "replaceAll": {
         "optionLabel": "todas as ocorrências de um texto ou expressão regular",
         "description": "Retorna uma nova string com todas as ocorrências de um texto ou expressão regular substituídas por outro texto específico. Esse método também pode ser usado para remover a ocorrência ao passar uma string vazia para substituí-la.",
-        "example": "const id = '123.456.789.00';\nconsole.log(id.replaceAll('.', '');",
+        "example": "const id = '123.456.789.00'; \n console.log(id.replaceAll('.', '');",
         "output": "\"12345678900\""
       }
     },
@@ -146,13 +146,13 @@
       "replace": {
         "optionLabel": "a primeira ocorrência de um texto ou expressão regular",
         "description": "Retorna uma nova string com a primeira ocorrência de um texto ou expressão regular substituída por outro texto específico.",
-        "example": "const paragraph = 'Código é poesia';\nconsole.log(paragraph.replace('poesia', 'arte');",
+        "example": "const paragraph = 'Código é poesia'; \n console.log(paragraph.replace('poesia', 'arte');",
         "output": "\"Código é arte\""
       },
       "replaceAll": {
         "optionLabel": "todas as ocorrências de um texto ou expressão regular",
         "description": "Retorna uma nova string com todas as ocorrências de um texto ou expressão regular substituídas por outro texto específico.",
-        "example": "const date = '26/01/2021';\nconsole.log(paragraph.replaceAll('/', '-');",
+        "example": "const date = '26/01/2021'; \n console.log(paragraph.replaceAll('/', '-');",
         "output": "\"26-01-2021\""
       }
     },
@@ -160,51 +160,51 @@
       "match": {
         "optionLabel": "todas as ocorrências de uma expressão regula.",
         "description": "Retorna um array com todas as ocorrências da expressão regular na string.",
-        "example": "const paragraph = 'Olá Mundo!';\nconst regex = /[A-Z]/g;\nconsole.log(paragraph.match(regex));",
+        "example": "const paragraph = 'Olá Mundo!'; \n const regex = /[A-Z]/g; \n console.log(paragraph.match(regex));",
         "output": "[\"O\", \"M\"]"
       },
       "matchAll": {
         "optionLabel": "todas as ocorrências de uma expressão regular, incluindo grupos",
         "description": "Retorna um iterados com todas as ocorrências da expressão regular, incluindo as ocorrências de grupos de captura.",
-        "example": "const regex = /t(e)(st(\\d?))/g;\nconst str = 'test1test2';\nconst array = [...str.matchAll(regexp)];\nconsole.log(array[0]);",
+        "example": "const regex = /t(e)(st(\\d?))/g; \n const str = 'test1test2'; \n const array = [...str.matchAll(regexp)]; \n console.log(array[0]);",
         "output": "[\"test1\", \"e\", \"st1\", \"1\"]"
       },
       "slice": {
         "optionLabel": "uma seção da string a começar por uma posição",
         "description": "Retorna uma nova string com todo o texto a partir de uma posição específica.",
-        "example": "const paragraph = 'Código é poesia';\nconsole.log(`exemplo 1: ${paragraph.slice(7)}`);\nconsole.log(`exemplo 2: ${paragraph.slice(-6)}`);",
-        "output": "\"example 1: é poesia\"\n\"example 2: poesia\""
+        "example": "const paragraph = 'Código é poesia'; \n console.log(`exemplo 1: ${paragraph.slice(7)}`); \n console.log(`exemplo 2: ${paragraph.slice(-6)}`);",
+        "output": "\"example 1: é poesia\" \n \"example 2: poesia\""
       },
       "substring": {
         "optionLabel": "uma seção da string entre dois índices",
         "description": "Retorna uma nova string com todo o texto entre dois índices específicos de uma string.",
-        "example": "const paragraph = 'Código é poesia';\nconsole.log(`exemplo 1: ${paragraph.slice(0, 8)}`);\nconsole.log(`exemplo 2: ${paragraph.slice(9, 15)}`);",
-        "output": "\"exemplo 1: Código é\"\n\"exemplo 2: poesia\""
+        "example": "const paragraph = 'Código é poesia'; \n console.log(`exemplo 1: ${paragraph.slice(0, 8)}`); \n console.log(`exemplo 2: ${paragraph.slice(9, 15)}`);",
+        "output": "\"exemplo 1: Código é\" \n \"exemplo 2: poesia\""
       }
     },
-    "other": {
+    "convert": {
       "split": {
-        "optionLabel": "dividir uma string com um separador",
+        "optionLabel": "uma string em um array com um separador",
         "description": "Retorna uma lista de strings encontradas entre o texto específicado como separador.",
-        "example": "const date = '26/01/2021';\nconst dateArr = date.split('/');\nconsole.log(dateArr);",
+        "example": "const date = '26/01/2021'; \n const dateArr = date.split('/'); \n console.log(dateArr);",
         "output": "[\"26\", \"01\", \"2021\"]"
       },
       "fromCodePoint": {
-        "optionLabel": "converter um código Unicode em texto",
+        "optionLabel": "um código Unicode em texto",
         "description": "Retorna uma string criada utilizando a sequência de códigos especificada.",
         "example": "console.log(String.fromCodePoint(79, 108, 225, 33, 129312));",
         "output": "[\"Olá!🤠\"]"
       },
       "toUpperCase": {
-        "optionLabel": "converter todo texto para caixa alta",
+        "optionLabel": "todo texto para caixa alta",
         "description": "Retorna uma nova string com todo o texto convertido para caixa alta.",
-        "example": "const hello = 'Olá mundo!';\nconsole.log(hello.toUpperCase());",
+        "example": "const hello = 'Olá mundo!'; \n console.log(hello.toUpperCase());",
         "output": "\"OLÁ MUNDO!\""
       },
       "toLowerCase": {
-        "optionLabel": "converter todo texto para caixa baixa",
+        "optionLabel": "todo texto para caixa baixa",
         "description": "Retorna uma nova string com todo o texto convertido para caixa baixa.",
-        "example": "const hello = 'Olá mundo!';\nconsole.log(hello.toLowerCase());",
+        "example": "const hello = 'Olá mundo!'; \n console.log(hello.toLowerCase());",
         "output": "\"olá mundo!\""
       }
     }
