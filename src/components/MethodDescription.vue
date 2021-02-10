@@ -1,8 +1,7 @@
 <template>
   <div>
-    <h2>
-      <span v-if="methodName === 'fromfromCodePoint'">String.{{methodName}}</span>
-      <span v-else>str.{{methodName}}()</span>
+    <h2 class="code-font">
+      String.{{methodName}}()
     </h2>
     <p v-html="$t(`${methodPath}.description`)"></p>
     <a :href="`https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/${methodName}`" target="_blank">

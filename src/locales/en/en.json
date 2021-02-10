@@ -70,8 +70,8 @@
       "search": {
         "optionLabel": "where is the occurrence of a regular expression",
         "description": "Returns the first index of occurrence of a regular expression on a string.",
-        "example": "const paragraph = 'items: item1 item2 item3'; \n console.log(`first item starting index: paragraph.search(/item[1-9]/g)`);",
-        "output": "\"first item starting index: 6\""
+        "example": "const paragraph = 'items: item1 item2 item3'; \n console.log(`first item starting index: ${paragraph.search(/item[1-9]/g)`)};",
+        "output": "\"first item starting index: 7\""
       },
       "startsWith": {
         "optionLabel": "if a string starts with specific characters",
@@ -180,7 +180,7 @@
       "substring": {
         "optionLabel": "a section of the string between two indexes",
         "description": "Returns a new string with all the text between the two given indexes.",
-        "example": "const paragraph = 'Code is poetry'; \n console.log(`example 1: ${paragraph.slice(0, 6)}`); \n console.log(`example 2: ${paragraph.slice(8, 14)}`);",
+        "example": "const paragraph = 'Code is poetry'; \n console.log(`example 1: ${paragraph.substring(0, 6)}`); \n console.log(`example 2: ${paragraph.substring(8, 14)}`);",
         "output": "\"example 1: Code is\" \n \"example 2: poetry\""
       }
     },
@@ -195,7 +195,7 @@
         "optionLabel": "Unicode into a string",
         "description": "Returns a string created by using the specified sequence of code points.",
         "example": "console.log(String.fromCodePoint(72, 101, 108, 108, 111, 33, 129312));",
-        "output": "[\"Hello!🤠\"]"
+        "output": "\"Hello!🤠\""
       },
       "toUpperCase": {
         "optionLabel": "all text to uppercase",

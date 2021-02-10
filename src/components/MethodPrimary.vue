@@ -1,28 +1,30 @@
 <template>
-  <div class="container">
+  <div class="row">
     <div class="col-left">
-      <!-- Method Type Select -->
-      <method-select
-        :name="'method-type'"
-        :label="$t('labels.firstSelectLabel')"
-        :methods="methodTypes"
-        :path="'labels.methodTypes'"
-        :action="'setSelectedType'"
-      >
-      </method-select>
-      <!-- END of Method Type Select -->
+      <div class="select-form">
+        <!-- Method Type Select -->
+        <method-select
+          :name="'method-type'"
+          :label="$t('labels.firstSelectLabel')"
+          :methods="methodTypes"
+          :path="'labels.methodTypes'"
+          :action="'setSelectedType'"
+        >
+        </method-select>
+        <!-- END of Method Type Select -->
 
-      <!-- Method Choice -->
-      <method-select
-        v-if="selectedType"
-        :name="'method-choice'"
-        :label="$t(`labels.methodTypes.${selectedType}.selectedLabel`)"
-        :methods="getSelectedTypeMethods()"
-        :path="`methods.${selectedType}`"
-        :action="'setSelectedMethod'"
-      >
-      </method-select>
-      <!-- END of Method Choice -->
+        <!-- Method Choice -->
+        <method-select
+          v-if="selectedType"
+          :name="'method-choice'"
+          :label="$t(`labels.methodTypes.${selectedType}.selectedLabel`)"
+          :methods="getSelectedTypeMethods()"
+          :path="`methods.${selectedType}`"
+          :action="'setSelectedMethod'"
+        >
+        </method-select>
+        <!-- END of Method Choice -->
+      </div>
 
       <!-- Method Description -->
       <method-description 

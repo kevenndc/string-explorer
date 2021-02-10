@@ -14,7 +14,7 @@
         "selectedLabel": "Eu tenho um índice e quero encontrar"
       },
       "findIndex": {
-        "optionLabel": "encontrar onde está um texto específico na string",
+        "optionLabel": "encontrar o índice de um texto na string",
         "selectedLabel": "Eu tenho um texto e quero saber"
       },
       "add": {
@@ -43,7 +43,7 @@
     "findChar": {
       "charAt": {
         "optionLabel": "um caractere em um índice específico",
-        "description": "Retorna o caractere encontrado em um determinado ídice da string.",
+        "description": "Retorna o caractere encontrado em um determinado índice da string.",
         "example": "const paragraph = 'Código é poesia'; \n const index = 2; \n console.log(`O caractere no índice ${index} é ${paragraph.charAt(index)}`);",
         "output": "\"O caractere no índice 2 é d\""
       },
@@ -70,8 +70,8 @@
       "search": {
         "optionLabel": "onde está a ocorrência de uma expressão regular",
         "description": "Retorna o primeiro índice da ocorrência de uma expressão regular na string.",
-        "example": "const paragraph = 'itens: item1 item2 item3'; \n console.log(`índice inicial do primeiro item: paragraph.search(/item[1-9]/g)`);",
-        "output": "\"índice inicial do primeiro item: 6\""
+        "example": "const paragraph = 'itens: item1 item2 item3'; \n console.log(`índice inicial do primeiro item: ${paragraph.search(/item[1-9]/g)}`);",
+        "output": "\"índice inicial do primeiro item: 7\""
       },
       "startsWith": {
         "optionLabel": "se uma string começa com caracteres expecíficos",
@@ -160,7 +160,7 @@
     },
     "get": {
       "match": {
-        "optionLabel": "todas as ocorrências de uma expressão regula.",
+        "optionLabel": "todas as ocorrências de uma expressão regular",
         "description": "Retorna um array com todas as ocorrências da expressão regular na string.",
         "example": "const paragraph = 'Olá Mundo!'; \n const regex = /[A-Z]/g; \n console.log(paragraph.match(regex));",
         "output": "[\"O\", \"M\"]"
@@ -175,12 +175,12 @@
         "optionLabel": "uma seção da string a começar por uma posição",
         "description": "Retorna uma nova string com todo o texto a partir de uma posição específica.",
         "example": "const paragraph = 'Código é poesia'; \n console.log(`exemplo 1: ${paragraph.slice(7)}`); \n console.log(`exemplo 2: ${paragraph.slice(-6)}`);",
-        "output": "\"example 1: é poesia\" \n \"example 2: poesia\""
+        "output": "\"examplo 1: é poesia\" \n \"examplo 2: poesia\""
       },
       "substring": {
         "optionLabel": "uma seção da string entre dois índices",
         "description": "Retorna uma nova string com todo o texto entre dois índices específicos de uma string.",
-        "example": "const paragraph = 'Código é poesia'; \n console.log(`exemplo 1: ${paragraph.slice(0, 8)}`); \n console.log(`exemplo 2: ${paragraph.slice(9, 15)}`);",
+        "example": "const paragraph = 'Código é poesia'; \n console.log(`exemplo 1: ${paragraph.substring(0, 8)}`); \n console.log(`exemplo 2: ${paragraph.substring(9, 15)}`);",
         "output": "\"exemplo 1: Código é\" \n \"exemplo 2: poesia\""
       }
     },
@@ -195,7 +195,7 @@
         "optionLabel": "um código Unicode em texto",
         "description": "Retorna uma string criada utilizando a sequência de códigos especificada.",
         "example": "console.log(String.fromCodePoint(79, 108, 225, 33, 129312));",
-        "output": "[\"Olá!🤠\"]"
+        "output": "\"Olá!🤠\""
       },
       "toUpperCase": {
         "optionLabel": "todo texto para caixa alta",

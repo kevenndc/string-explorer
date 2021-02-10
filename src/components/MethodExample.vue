@@ -2,14 +2,14 @@
   <div>
     <div>
       <h3>{{ $t('labels.example') }}</h3>
-      <pre class="language-js">
-        <code v-html="codeExample"></code>
+      <pre class="language-js code-font">
+        <code class="code-font" v-html="codeExample"></code>
       </pre>
     </div>
     <div>
       <h3>{{ $t('labels.output') }}</h3>
       <pre class="language-js">
-        <code v-html="codeOutput"></code>
+        <code class="code-font" v-html="codeOutput"></code>
       </pre>
     </div>
   </div>
