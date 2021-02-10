@@ -11,3 +11,8 @@
     </select>
   </div>
 </template>
+<style scoped>
+  .locale-switcher {
+    text-align: right;
+  }
+</style>

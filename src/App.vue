@@ -1,7 +1,7 @@
 <template>
 <div>
   <locale-switcher />
-  <main>
+  <main class="container">
     <h1>JavaScript String Explorer</h1>
     <method-primary></method-primary>
   </main>
@@ -27,9 +27,12 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
   margin-top: 60px;
   white-space: pre-line;
 }
+.container {
+    max-width: 980px;
+    margin: 0 auto;
+  }
 </style>

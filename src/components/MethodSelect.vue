@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="select-item">
   <!-- Method Type Select -->
     <label :for="name">{{ label }}</label>
     <select class="method-select" :name="name" :id="name" v-model="selected">

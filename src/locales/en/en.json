@@ -6,6 +6,8 @@
   "labels": {
     "firstSelectLabel": "I have a string, I would like to",
     "seeDocs": "see the docs",
+    "example": "Exemple",
+    "output": "Output",
     "methodTypes": {
       "findChar": {
         "optionLabel": "find something in a specific index",

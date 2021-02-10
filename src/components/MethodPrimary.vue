@@ -1,39 +1,42 @@
 <template>
-  <div>
-    <!-- Method Type Select -->
-    <method-select
-      :name="'method-type'"
-      :label="$t('labels.firstSelectLabel')"
-      :methods="methodTypes"
-      :path="'labels.methodTypes'"
-      :action="'setSelectedType'"
-    >
-    </method-select>
-    <!-- END of Method Type Select -->
+  <div class="container">
+    <div class="col-left">
+      <!-- Method Type Select -->
+      <method-select
+        :name="'method-type'"
+        :label="$t('labels.firstSelectLabel')"
+        :methods="methodTypes"
+        :path="'labels.methodTypes'"
+        :action="'setSelectedType'"
+      >
+      </method-select>
+      <!-- END of Method Type Select -->
 
-    <!-- Method Choice -->
-    <method-select
-      v-if="selectedType"
-      :name="'method-choice'"
-      :label="$t(`labels.methodTypes.${selectedType}.selectedLabel`)"
-      :methods="getSelectedTypeMethods()"
-      :path="`methods.${selectedType}`"
-      :action="'setSelectedMethod'"
-    >
-    </method-select>
-    <!-- END of Method Choice -->
+      <!-- Method Choice -->
+      <method-select
+        v-if="selectedType"
+        :name="'method-choice'"
+        :label="$t(`labels.methodTypes.${selectedType}.selectedLabel`)"
+        :methods="getSelectedTypeMethods()"
+        :path="`methods.${selectedType}`"
+        :action="'setSelectedMethod'"
+      >
+      </method-select>
+      <!-- END of Method Choice -->
 
-    <!-- Method Description -->
-    <method-description 
-      v-if="selectedMethod" 
-      :methodName="selectedMethod" 
-      :methodPath="methodPath"
-    >
-    </method-description>
-    <!-- END of Method Description -->
-
-    <method-example v-if="selectedMethod" :methodPath="methodPath"></method-example>
-
+      <!-- Method Description -->
+      <method-description 
+        v-if="selectedMethod" 
+        :methodName="selectedMethod" 
+        :methodPath="methodPath"
+      >
+      </method-description>
+      <!-- END of Method Description -->
+    </div>
+    
+    <div class="col-right">
+      <method-example v-if="selectedMethod" :methodPath="methodPath"></method-example>
+    </div>
   </div>
 </template>
 <script>
@@ -100,5 +103,8 @@ export default {
 <style scoped>
   .method-select {
     margin-left: 5px;
+  }
+  .select-item:first-child {
+    margin-bottom: 10px;
   }
 </style>

@@ -1,11 +1,13 @@
 <template>
   <div>
     <div>
+      <h3>{{ $t('labels.example') }}</h3>
       <pre class="language-js">
         <code v-html="codeExample"></code>
       </pre>
     </div>
     <div>
+      <h3>{{ $t('labels.output') }}</h3>
       <pre class="language-js">
         <code v-html="codeOutput"></code>
       </pre>
@@ -14,8 +16,9 @@
 </template>
 <script>
 import Prism from 'prismjs';
-import 'prismjs/themes/prism-okaidia.css';
 
+import 'prismjs/components/prism-javascript'
+import 'prismjs/themes/prism-okaidia.css';
 
 export default {
   props: {
