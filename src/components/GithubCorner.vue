@@ -1,6 +1,6 @@
 <template>
   <div>
-    <a class="github-corner" href="https://github.com/kevenndc/string-explorer">
+    <a class="github-corner" target="_blank" href="https://github.com/kevenndc/string-explorer">
     <!-- Tanks to @tholman for the github corner SVG and animation -->
       <svg
         xmlns="http://www.w3.org/2000/svg"

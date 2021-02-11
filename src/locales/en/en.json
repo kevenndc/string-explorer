@@ -4,6 +4,7 @@
     "author": "kevenndc"
   },
   "labels": {
+    "language": "Language",
     "firstSelectLabel": "I have a string, I would like to",
     "seeDocs": "see the docs",
     "example": "Exemple",
@@ -102,7 +103,7 @@
       "padStart": {
         "optionLabel": "the same text repeated at the beginning of a string",
         "description": "Returns a new string filled with the same text at the beginning of the string until it reaches a given length.",
-        "example": "const lastDigits = '5834'; \n const maskedNumber = lastDigits.padStart(16, '*') \n console.log(maskedNumber);",
+        "example": "const lastDigits = '5834'; \n const maskedNumber = lastDigits.padStart(16, '*'); \n console.log(maskedNumber);",
         "output": "\"************5834\""
       },
       "padEnd": {

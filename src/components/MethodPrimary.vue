@@ -1,57 +1,62 @@
 <template>
   <div class="row">
-    <div class="col-left">
-      <div class="select-form">
-        <!-- Method Type Select -->
-        <method-select
-          :name="'method-type'"
-          :label="$t('labels.firstSelectLabel')"
-          :methods="methodTypes"
-          :path="'labels.methodTypes'"
-          :action="'setSelectedType'"
-        >
-        </method-select>
-        <!-- END of Method Type Select -->
+    <div class="select-form">
+      <!-- Method Type Select -->
+      <method-select
+        :name="'method-type'"
+        :label="$t('labels.firstSelectLabel')"
+        :methods="methodTypes"
+        :path="'labels.methodTypes'"
+        :action="'setSelectedType'"
+      >
+      </method-select>
+      <!-- END of Method Type Select -->
 
-        <!-- Method Choice -->
-        <method-select
-          v-if="selectedType"
-          :name="'method-choice'"
-          :label="$t(`labels.methodTypes.${selectedType}.selectedLabel`)"
-          :methods="getSelectedTypeMethods()"
-          :path="`methods.${selectedType}`"
-          :action="'setSelectedMethod'"
-        >
-        </method-select>
-        <!-- END of Method Choice -->
-      </div>
+      <!-- Method Choice -->
+      <method-select
+        v-if="selectedType"
+        :name="'method-choice'"
+        :label="$t(`labels.methodTypes.${selectedType}.selectedLabel`)"
+        :methods="getSelectedTypeMethods()"
+        :path="`methods.${selectedType}`"
+        :action="'setSelectedMethod'"
+      >
+      </method-select>
+      <!-- END of Method Choice -->
+    </div>
 
+    <hr>
+
+    <div class="method-info">
       <!-- Method Description -->
-      <method-description 
-        v-if="selectedMethod" 
-        :methodName="selectedMethod" 
+      <method-description
+        v-if="selectedMethod"
+        :methodName="selectedMethod"
         :methodPath="methodPath"
       >
       </method-description>
+
+      <hr>
+
       <!-- END of Method Description -->
-    </div>
-    
-    <div class="col-right">
-      <method-example v-if="selectedMethod" :methodPath="methodPath"></method-example>
+      <method-example
+        v-if="selectedMethod"
+        :methodPath="methodPath"
+      ></method-example>
     </div>
   </div>
 </template>
 <script>
 import { useI18n } from "vue-i18n";
-import MethodDescription from './MethodDescription.vue';
-import MethodExample from './MethodExample.vue';
-import MethodSelect from './MethodSelect.vue';
+import MethodDescription from "./MethodDescription.vue";
+import MethodExample from "./MethodExample.vue";
+import MethodSelect from "./MethodSelect.vue";
 
 export default {
-  components: { 
-    MethodDescription, 
-    MethodExample, 
-    MethodSelect 
+  components: {
+    MethodDescription,
+    MethodExample,
+    MethodSelect,
   },
 
   setup() {
@@ -76,8 +81,8 @@ export default {
     },
     selectedMethod() {
       const path = `methods.${this.selectedType}.${this.selectedMethod}`;
-      this.$store.commit('setSelectedPath', path);
-    }
+      this.$store.commit("setSelectedPath", path);
+    },
   },
 
   methods: {
@@ -85,8 +90,8 @@ export default {
       return Object.keys(this.messages.methods[this.selectedType]);
     },
     resetSelectedMethod() {
-      this.$store.commit('resetSelectedMethod');
-    }
+      this.$store.commit("resetSelectedMethod");
+    },
   },
 
   computed: {
@@ -97,16 +102,13 @@ export default {
       return this.$store.state.selectedMethod;
     },
     methodPath() {
-      return `methods.${this.selectedType}.${this.selectedMethod}`
-    }
-  }
+      return `methods.${this.selectedType}.${this.selectedMethod}`;
+    },
+  },
 };
 </script>
 <style scoped>
-  .method-select {
-    margin-left: 5px;
-  }
-  .select-item:first-child {
-    margin-bottom: 10px;
-  }
+.select-item:first-child {
+  margin-bottom: 10px;
+}
 </style>

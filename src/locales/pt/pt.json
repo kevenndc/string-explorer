@@ -4,6 +4,7 @@
   "author": "kevenndc"
   },
   "labels": {
+    "language": "Idioma",
     "firstSelectLabel": "Eu tenho uma string, eu gostaria de",
     "seeDocs": "veja a documentação",
     "example": "Exemplo",
@@ -48,7 +49,7 @@
         "output": "\"O caractere no índice 2 é d\""
       },
       "codePointAt": {
-        "optionLabel": "um código unicode de um caractere em um índice específico",
+        "optionLabel": "o código unicode do caractere no índice",
         "description": "Retorna o código unicode de um caractere em um índice específico.",
         "example": "const hello = 'Olá mundo! 😎'; \n console.log(`O código ${hello.codePointAt(1))} é igual ao caractere ${hello.charAt(1)}`); \n console.log(`o código do emoji 😎 é ${hello.codePointAt(12)}`)",
         "output": "\"O código 108 é igual ao caractere l\" \n \"O código do emoji 😎 é 128526\""
@@ -102,7 +103,7 @@
       "padStart": {
         "optionLabel": "um mesmo texto se repetindo no início da string",
         "description": "Retorna uma nova string com um mesmo texto se repetindo no início da string até ela atingir um tamanho limite específico.",
-        "example": "const lastDigits = '5834'; \n const maskedNumber = lastDigits.padStart(16, '*') \n console.log(maskedNumber);",
+        "example": "const lastDigits = '5834'; \n const maskedNumber = lastDigits.padStart(16, '*'); \n console.log(maskedNumber);",
         "output": "\"************5834\""
       },
       "padEnd": {

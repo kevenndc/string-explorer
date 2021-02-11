@@ -39,9 +39,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-  .method-select {
-    margin-left: 5px;
-  }
-</style>

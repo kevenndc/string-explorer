@@ -18,7 +18,7 @@
 import Prism from 'prismjs';
 
 import 'prismjs/components/prism-javascript'
-import 'prismjs/themes/prism-okaidia.css';
+
 
 export default {
   props: {
@@ -39,6 +39,8 @@ export default {
 }
 </script>
 <style scoped>
+@import url(../assets/prism-themes/prism-dracula.css);
+
 code[class*="language-"], pre[class*="language-"] {
   white-space: pre-line;
 }

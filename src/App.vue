@@ -1,8 +1,8 @@
 <template>
 <div>
   <github-corner></github-corner>
-  <locale-switcher />
   <main class="container">
+    <locale-switcher />
     <h1>JavaScript String Explorer</h1>
     <method-primary></method-primary>
   </main>
@@ -35,23 +35,42 @@ body, select {
   font-size: 18px;
 }
 select {
-  /* font-size: 1em; */
+  margin-left: 5px;
 }
 code {
   font-size: 16px;
 }
+
+hr {
+  margin: 2em 0 1.8em;
+  height: 1px;
+  background-color: #ccc;
+  border: none;
+}
+
 .code-font {
   font-family: 'Source Code Pro', monospace;
 }
-#app {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
-  margin-top: 60px;
-  white-space: pre-line;
-}
+
 .container {
-    max-width: 980px;
-    margin: 0 auto;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+#app {
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+color: #2c3e50;
+margin-top: 60px;
+white-space: pre-line;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  body {
+    background-color: #333;
   }
+  a {
+    color: #50fa7b;
+  }
+} */
 </style>
