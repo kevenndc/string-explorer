@@ -1,5 +1,6 @@
 <template>
   <div>
+    <hr>
     <h2 class="code-font">
       String.{{methodName}}()
     </h2>
@@ -8,6 +9,7 @@
       {{ $t('labels.seeDocs') }} &#8594;
     </a>
   </div>
+  <hr>
 </template>
 <script>
 export default {

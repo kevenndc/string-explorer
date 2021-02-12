@@ -37,13 +37,17 @@
       "convert": {
         "optionLabel": "converter",
         "selectedLabel": "Eu quero converter"
+      },
+      "has": {
+        "optionLabel": "saber se ela possui um texto específico",
+        "selectedLabel": "Eu quero saber se"
       }
     }
   },
   "methods": {
     "findChar": {
       "charAt": {
-        "optionLabel": "um caractere em um índice específico",
+        "optionLabel": "o caractere no índice especificado",
         "description": "Retorna o caractere encontrado em um determinado índice da string.",
         "example": "const paragraph = 'Código é poesia'; \n const index = 2; \n console.log(`O caractere no índice ${index} é ${paragraph.charAt(index)}`);",
         "output": "\"O caractere no índice 2 é d\""
@@ -73,18 +77,6 @@
         "description": "Retorna o primeiro índice da ocorrência de uma expressão regular na string.",
         "example": "const paragraph = 'itens: item1 item2 item3'; \n console.log(`índice inicial do primeiro item: ${paragraph.search(/item[1-9]/g)}`);",
         "output": "\"índice inicial do primeiro item: 7\""
-      },
-      "startsWith": {
-        "optionLabel": "se uma string começa com caracteres expecíficos",
-        "description": "Retorna <code>true</code> ou <code>false</code> se uma string começar com os caracteres determinados.",
-        "example": "const paragraph = 'Código é poesia'; \n console.log(`Começa com Código? ${paragraph.startsWith('Código')}`); \n console.log(`Começa com poesia? ${paragraph.startsWith('poesia')}`);",
-        "output": "\"Começa com Código? true\" \n \"Começa com poesia? false\""
-      },
-      "endsWith": {
-        "optionLabel": "se uma string termina com caracteres específicos",
-        "description": "Retorna <code>true</code> ou <code>false</code> se uma string terminar com os caracteres determinados.",
-        "example": "const paragraph = 'Código é poesia'; \n console.log(`Termina com código? ${paragraph.endsWith('código')}`); \n console.log(`Termina com poesia? ${paragraph.endsWith('poesia')}`);",
-        "output": "\"Termina com código? false\" \n \"Termina com poesia? true\""
       }
     },
     "add": {
@@ -187,7 +179,7 @@
     },
     "convert": {
       "split": {
-        "optionLabel": "uma string em um array com um separador",
+        "optionLabel": "a string em um array utilizando um separador",
         "description": "Retorna uma lista de strings encontradas entre o texto específicado como separador.",
         "example": "const date = '26/01/2021'; \n const dateArr = date.split('/'); \n console.log(dateArr);",
         "output": "[\"26\", \"01\", \"2021\"]"
@@ -209,6 +201,26 @@
         "description": "Retorna uma nova string com todo o texto convertido para caixa baixa.",
         "example": "const hello = 'Olá mundo!'; \n console.log(hello.toLowerCase());",
         "output": "\"olá mundo!\""
+      }
+    },
+    "has": {
+      "includes": {
+        "optionLabel": "a string contém um texto específico",
+        "description": "Retorna <code>true</code> ou <code>false</code> se uma string incluir o texto especificado.",
+        "example": "const paragraph = 'Código é poesia'; \n console.log(paragraph.includes('Código'); \n console.log(paragraph.includes('olá'));",
+        "output": "true \n false"
+      },
+      "startsWith": {
+        "optionLabel": "a string começa com um texto específico",
+        "description": "Retorna <code>true</code> ou <code>false</code> se uma string começar com os caracteres determinados.",
+        "example": "const paragraph = 'Código é poesia'; \n console.log(`Começa com Código? ${paragraph.startsWith('Código')}`); \n console.log(`Começa com poesia? ${paragraph.startsWith('poesia')}`);",
+        "output": "\"Começa com Código? true\" \n \"Começa com poesia? false\""
+      },
+      "endsWith": {
+        "optionLabel": "a string termina com um texto específico",
+        "description": "Retorna <code>true</code> ou <code>false</code> se uma string terminar com os caracteres determinados.",
+        "example": "const paragraph = 'Código é poesia'; \n console.log(`Termina com código? ${paragraph.endsWith('código')}`); \n console.log(`Termina com poesia? ${paragraph.endsWith('poesia')}`);",
+        "output": "\"Termina com código? false\" \n \"Termina com poesia? true\""
       }
     }
   }

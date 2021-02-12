@@ -25,8 +25,6 @@
       <!-- END of Method Choice -->
     </div>
 
-    <hr>
-
     <div class="method-info">
       <!-- Method Description -->
       <method-description
@@ -35,8 +33,6 @@
         :methodPath="methodPath"
       >
       </method-description>
-
-      <hr>
 
       <!-- END of Method Description -->
       <method-example
