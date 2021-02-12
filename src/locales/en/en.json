@@ -63,8 +63,8 @@
       "indexOf": {
         "optionLabel": "where is the first occurrence of a text",
         "description": "Returns the index of the first occurrence a given text in the string.",
-        "example": "const paragraph = 'Code is poetry'; \n console.log(`The index of 'o' is ${paragraph.indexOf('o')}`);",
-        "output": "\"The index of 'o' is 1\""
+        "example": "const paragraph = 'Code is poetry'; \n console.log(paragraph.indexOf('d'));",
+        "output": "2"
       },
       "lastIndexOf": {
         "optionLabel": "where is the last occurrence of a text",
@@ -207,7 +207,7 @@
       "includes": {
         "optionLabel": "includes a specific text",
         "description": "Returns <code>true</code> or <code>false</code> if the string contains the given text.",
-        "example": "const paragraph = 'Code is poetry'; \n console.log(paragraph.includes('Code'); \n console.log(paragraph.includes('hello'));",
+        "example": "const paragraph = 'Code is poetry'; \n console.log(paragraph.includes('Code')); \n console.log(paragraph.includes('hello'));",
         "output": "true \n false"
       },
       "startsWith": {

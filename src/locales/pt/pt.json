@@ -55,7 +55,7 @@
       "codePointAt": {
         "optionLabel": "o código unicode do caractere no índice",
         "description": "Retorna o código unicode de um caractere em um índice específico.",
-        "example": "const hello = 'Olá mundo! 😎'; \n console.log(`O código ${hello.codePointAt(1))} é igual ao caractere ${hello.charAt(1)}`); \n console.log(`o código do emoji 😎 é ${hello.codePointAt(12)}`)",
+        "example": "const hello = 'Olá mundo! 😎'; \n console.log(`O código ${hello.codePointAt(1))} é igual ao caractere ${hello.charAt(1)}`); \n console.log(`O código do emoji 😎 é ${hello.codePointAt(12)}`)",
         "output": "\"O código 108 é igual ao caractere l\" \n \"O código do emoji 😎 é 128526\""
       }
     },
@@ -63,8 +63,8 @@
       "indexOf": {
         "optionLabel": "onde está a primeira ocorrência do texto",
         "description": "Retorna o índice da primeira ocorrência de um determinado texto em uma string.",
-        "example": "const paragraph = 'Código é poesia'; \n console.log(`O índice de 'ó' é ${paragraph.indexOf('ó')}`);",
-        "output": "\"O índice de 'ó' é 1\""
+        "example": "const paragraph = 'Código é poesia'; \n console.log(paragraph.indexOf('d'));",
+        "output": "2"
       },
       "lastIndexOf": {
         "optionLabel": "onde está a última ocorrência do texto",
@@ -207,7 +207,7 @@
       "includes": {
         "optionLabel": "a string contém um texto específico",
         "description": "Retorna <code>true</code> ou <code>false</code> se uma string incluir o texto especificado.",
-        "example": "const paragraph = 'Código é poesia'; \n console.log(paragraph.includes('Código'); \n console.log(paragraph.includes('olá'));",
+        "example": "const paragraph = 'Código é poesia'; \n console.log(paragraph.includes('Código')); \n console.log(paragraph.includes('olá'));",
         "output": "true \n false"
       },
       "startsWith": {
