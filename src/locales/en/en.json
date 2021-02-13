@@ -10,14 +10,6 @@
     "example": "Exemple",
     "output": "Output",
     "methodTypes": {
-      "findChar": {
-        "optionLabel": "find something in a specific index",
-        "selectedLabel": "I have an index and want to find"
-      },
-      "findIndex": {
-        "optionLabel": "find where is a specific text in the string",
-        "selectedLabel": "I have a text and want to find out"
-      },
       "add": {
         "optionLabel": "add something",
         "selectedLabel": "I want to add"
@@ -34,51 +26,25 @@
         "optionLabel": "get some parts of it",
         "selectedLabel": "I want to get"
       },
-      "convert": {
-        "optionLabel": "convert",
-        "selectedLabel": "I want to convert"
-      },
       "has": {
         "optionLabel": "know if it has a specific text",
         "selectedLabel": "I want to know if the string"
+      },
+      "findChar": {
+        "optionLabel": "find something in a specific index",
+        "selectedLabel": "I have an index and want to find"
+      },
+      "findIndex": {
+        "optionLabel": "find where is a specific text in the string",
+        "selectedLabel": "I have a text and want to find out"
+      },
+      "convert": {
+        "optionLabel": "convert",
+        "selectedLabel": "I want to convert"
       }
     }
   },
   "methods": {
-    "findChar": {
-      "charAt": {
-        "optionLabel": "a character in a given index",
-        "description": "Returns a single character in a given index of the string.",
-        "example": "const paragraph = 'Code is poetry'; \n  const index = 2; \n console.log(`The character at index ${index} is ${paragraph.charAt(index)}`);",
-        "output": "\"The character at index 2 is d\""
-      },
-      "codePointAt": {
-        "optionLabel": "a character unicode number in a given index",
-        "description": "Returns the character unicode identifier in a given index of the string.",
-        "example": "const hello = 'Hello world! 😎'; \n console.log(`The code ${hello.codePointAt(4))} is equal to the character ${hello.charAt(4)}`); \n console.log(`The code of the emoji 😎 is ${hello.codePointAt(13)}`)",
-        "output": "\"The code 111 is equal to the character o\" \n \"The code of the emoji 😎 is 128526\""
-      }
-    },
-    "findIndex": {
-      "indexOf": {
-        "optionLabel": "where is the first occurrence of a text",
-        "description": "Returns the index of the first occurrence a given text in the string.",
-        "example": "const paragraph = 'Code is poetry'; \n console.log(paragraph.indexOf('d'));",
-        "output": "2"
-      },
-      "lastIndexOf": {
-        "optionLabel": "where is the last occurrence of a text",
-        "description": "Returns the index of the last occurrence a given text in the string.",
-        "example": "const paragraph = 'Code is poetry'; \n console.log(`The last occurrence of the letter 'o' is on index ${paragraph.lastIndexOf('o')}`);",
-        "output": "\"The last occurrence of the letter 'o' is on index 9\""
-      },
-      "search": {
-        "optionLabel": "where is the occurrence of a regular expression",
-        "description": "Returns the first index of occurrence of a regular expression on a string.",
-        "example": "const paragraph = 'items: item1 item2 item3'; \n console.log(`first item starting index: ${paragraph.search(/item[1-9]/g)`)};",
-        "output": "\"first item starting index: 7\""
-      }
-    },
     "add": {
       "concat": {
         "optionLabel": "one or more texts to a string",
@@ -93,13 +59,13 @@
         "output": "\"AbcAbcAbc\""
       },
       "padStart": {
-        "optionLabel": "the same text repeated at the beginning of a string",
+        "optionLabel": "some text repeated at the beginning of a string",
         "description": "Returns a new string filled with the same text at the beginning of the string until it reaches a given length.",
         "example": "const lastDigits = '5834'; \n const maskedNumber = lastDigits.padStart(16, '*'); \n console.log(maskedNumber);",
         "output": "\"************5834\""
       },
       "padEnd": {
-        "optionLabel": "the same text repeated at the end of a string",
+        "optionLabel": "some text repeated at the end of a string",
         "description": "Returns a new string filled with the same text at the end of the string until it reaches a given length.",
         "example": "const firstDigits = '0896'; \n const maskedNumber = firstDigits.padEnd(16, '*') \n console.log(maskedNumber);",
         "output": "\"0896************\""
@@ -165,16 +131,70 @@
         "output": "[\"test1\", \"e\", \"st1\", \"1\"]"
       },
       "slice": {
-        "optionLabel": "a section of the string starting at a given index",
+        "optionLabel": "a part of the string starting at a given index",
         "description": "Returns a new string with all the text between the given indexes.",
         "example": "const paragraph = 'Code is poetry'; \n console.log(`example 1: ${paragraph.slice(5)}`); \n console.log(`example 2: ${paragraph.slice(-6)}`);",
         "output": "\"example 1: is poetry\" \n \"example 2: poetry\""
       },
       "substring": {
-        "optionLabel": "a section of the string between two indexes",
+        "optionLabel": "a part of the string between two indexes",
         "description": "Returns a new string with all the text between the two given indexes.",
         "example": "const paragraph = 'Code is poetry'; \n console.log(`example 1: ${paragraph.substring(0, 6)}`); \n console.log(`example 2: ${paragraph.substring(8, 14)}`);",
         "output": "\"example 1: Code is\" \n \"example 2: poetry\""
+      }
+    },
+    "has": {
+      "includes": {
+        "optionLabel": "includes a specific text",
+        "description": "Returns <code>true</code> or <code>false</code> if the string contains the given text.",
+        "example": "const paragraph = 'Code is poetry'; \n console.log(paragraph.includes('Code')); \n console.log(paragraph.includes('hello'));",
+        "output": "true \n false"
+      },
+      "startsWith": {
+        "optionLabel": "starts with a specific text",
+        "description": "Returns <code>true</code> or <code>false</code> if the string starts with given characters.",
+        "example": "const paragraph = 'Code is poetry'; \n console.log(`Starts with Code? ${paragraph.startsWith('Code')}`); \n console.log(`Starts with Poetry? ${paragraph.startsWith('Poetry')}`);",
+        "output": "\"Starts with Code? true \n Starts with Poetry? false\""
+      },
+      "endsWith": {
+        "optionLabel": "ends with a specific text",
+        "description": "Returns <code>true</code> or <code>false</code> if the string ends with given characters.",
+        "example": "const paragraph = 'Code is poetry'; \n console.log(`Ends with code? ${paragraph.endsWith('code')}`); \n console.log(`Ends with poetry? ${paragraph.startsWith('poetry')}`);",
+        "output": "\"Ends with code? false \n Ends with poetry? true\""
+      }
+    },
+    "findChar": {
+      "charAt": {
+        "optionLabel": "a character in a given index",
+        "description": "Returns a single character in a given index of the string.",
+        "example": "const paragraph = 'Code is poetry'; \n  const index = 2; \n console.log(`The character at index ${index} is ${paragraph.charAt(index)}`);",
+        "output": "\"The character at index 2 is d\""
+      },
+      "codePointAt": {
+        "optionLabel": "a character's Unicode number in a given index",
+        "description": "Returns the character unicode identifier in a given index of the string.",
+        "example": "const hello = 'Hello world! 😎'; \n console.log(`The code ${hello.codePointAt(4))} is equal to the character ${hello.charAt(4)}`); \n console.log(`The code of the emoji 😎 is ${hello.codePointAt(13)}`)",
+        "output": "\"The code 111 is equal to the character o\" \n \"The code of the emoji 😎 is 128526\""
+      }
+    },
+    "findIndex": {
+      "indexOf": {
+        "optionLabel": "where is the first occurrence of a text",
+        "description": "Returns the index of the first occurrence a given text in the string.",
+        "example": "const paragraph = 'Code is poetry'; \n console.log(paragraph.indexOf('d'));",
+        "output": "2"
+      },
+      "lastIndexOf": {
+        "optionLabel": "where is the last occurrence of a text",
+        "description": "Returns the index of the last occurrence a given text in the string.",
+        "example": "const paragraph = 'Code is poetry'; \n console.log(`The last occurrence of the letter 'o' is on index ${paragraph.lastIndexOf('o')}`);",
+        "output": "\"The last occurrence of the letter 'o' is on index 9\""
+      },
+      "search": {
+        "optionLabel": "where is the occurrence of a regular expression",
+        "description": "Returns the first index of the occurrence of a regular expression on a string.",
+        "example": "const paragraph = 'items: item1 item2 item3'; \n console.log(`first item starting index: ${paragraph.search(/item[1-9]/g)`)};",
+        "output": "\"first item starting index: 7\""
       }
     },
     "convert": {
@@ -201,26 +221,6 @@
         "description": "Returns a new string with all text converted to lowercase.",
         "example": "const hello = 'Hello world!'; \n console.log(hello.toLowerCase());",
         "output": "\"hello world!\""
-      }
-    },
-    "has": {
-      "includes": {
-        "optionLabel": "includes a specific text",
-        "description": "Returns <code>true</code> or <code>false</code> if the string contains the given text.",
-        "example": "const paragraph = 'Code is poetry'; \n console.log(paragraph.includes('Code')); \n console.log(paragraph.includes('hello'));",
-        "output": "true \n false"
-      },
-      "startsWith": {
-        "optionLabel": "starts with a specific text",
-        "description": "Returns <code>true</code> or <code>false</code> if the string starts with given characters.",
-        "example": "const paragraph = 'Code is poetry'; \n console.log(`Starts with Code? ${paragraph.startsWith('Code')}`); \n console.log(`Starts with Poetry? ${paragraph.startsWith('Poetry')}`);",
-        "output": "\"Starts with Code? true \n Starts with Poetry? false\""
-      },
-      "endsWith": {
-        "optionLabel": "ends with a specific text",
-        "description": "Returns <code>true</code> or <code>false</code> if the string ends with given characters.",
-        "example": "const paragraph = 'Code is poetry'; \n console.log(`Ends with code? ${paragraph.endsWith('code')}`); \n console.log(`Ends with poetry? ${paragraph.startsWith('poetry')}`);",
-        "output": "\"Ends with code? false \n Ends with poetry? true\""
       }
     }
   }
