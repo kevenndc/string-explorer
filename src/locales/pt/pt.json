@@ -20,7 +20,7 @@
       },
       "replace": {
         "optionLabel": "substituir algo",
-        "selectedLabel": "eu quero substituir"
+        "selectedLabel": "Eu quero substituir"
       },
       "get": {
         "optionLabel": "obter uma parte dela",
@@ -50,25 +50,25 @@
     "add": {
       "concat": {
         "optionLabel": "um ou mais textos à string",
-        "description": "Retorna uma nova string com o texto da string original concatenado com os textos especificados.",
+        "description": "Retorna uma nova string com o texto da string original concatenado com os textos passados como argumento.",
         "example": "const code = 'Código'; \n console.log(code.concat(' é ', 'poesia');",
         "output": "\"Código é poesia\""
       },
       "repeat": {
         "optionLabel": "cópias repetidas da mesma string",
-        "description": "Retorna uma nova string com o texto original da string repetido um número específico de vezes.",
+        "description": "Retorna uma nova string com o texto original da string repetido um determinado número de vezes.",
         "example": "const abc = 'Abc'; \n console.log(abc.repeat(3));",
         "output": "\"AbcAbcAbc\""
       },
       "padStart": {
-        "optionLabel": "um mesmo texto se repetindo no início da string",
-        "description": "Retorna uma nova string com um mesmo texto se repetindo no início da string até ela atingir um tamanho limite específico.",
+        "optionLabel": "um texto se repetindo no início da string",
+        "description": "Retorna uma nova string com um mesmo texto se repetindo no início da string até ela atingir um tamanho limite determinado.",
         "example": "const lastDigits = '5834'; \n const maskedNumber = lastDigits.padStart(16, '*'); \n console.log(maskedNumber);",
         "output": "\"************5834\""
       },
       "padEnd": {
-        "optionLabel": "m mesmo texto se repetindo no final",
-        "description": "Retorna uma nova string com um mesmo texto se repetindo no final da string até ela atingir um tamanho limite específico.",
+        "optionLabel": "um texto se repetindo no final da string",
+        "description": "Retorna uma nova string com um mesmo texto se repetindo no final da string até ela atingir um tamanho limite determinado.",
         "example": "const firstDigits = '0896'; \n const maskedNumber = firstDigits.padEnd(16, '*') \n console.log(maskedNumber);",
         "output": "\"0896************\""
       } 
@@ -81,26 +81,26 @@
         "output": "\"1234567890\""
       },
       "trimStart": {
-        "optionLabel": "todos os espaços em branco do início da string",
-        "description": "Retorna uma nova string com todos os espaços em branco do ínicio.",
+        "optionLabel": "todos os espaços em branco no início da string",
+        "description": "Retorna uma nova string com todos os espaços em branco removidos no ínicio da string.",
         "example": "const text = '  Olá mundo!  '; \n console.log(text.trimStart());",
         "output": "\"Olá mundo!  \""
       },
       "trimEnd": {
-        "optionLabel": "todos os espaços em branco do final da string",
-        "description": "Retorna uma nova string com todos os espaços em branco do final",
+        "optionLabel": "todos os espaços em branco no final da string",
+        "description": "Retorna uma nova string com todos os espaços em branco removidos no final da string",
         "example": "const text = '  Olá mundo!  '; \n console.log(text.trimEnd());",
         "output": "\"  Olá mundo!\""
       },
       "replace": {
         "optionLabel": "a primeira ocorrência de um texto ou expressão regular",
-        "description": "Retorna uma nova string com a primeira ocorrência de um texto ou expressão regular substituída por outro texto específico. Esse método também pode ser usado para remover a ocorrência ao passar uma string vazia para substituí-la.",
+        "description": "Retorna uma nova string com a primeira ocorrência de um texto ou expressão regular substituída por outro texto determinado. Esse método também pode ser usado para remover a ocorrência ao passar uma string vazia para substituí-la.",
         "example": "const paragraph = 'Olá mundo!'; \n console.log(paragraph.replace(' mundo', '');",
         "output": "\"Olá!\""
       },
       "replaceAll": {
         "optionLabel": "todas as ocorrências de um texto ou expressão regular",
-        "description": "Retorna uma nova string com todas as ocorrências de um texto ou expressão regular substituídas por outro texto específico. Esse método também pode ser usado para remover a ocorrência ao passar uma string vazia para substituí-la.",
+        "description": "Retorna uma nova string com todas as ocorrências de um texto ou expressão regular substituídas por outro texto determinado. Esse método também pode ser usado para remover as ocorrências ao passar uma string vazia para substituí-las.",
         "example": "const id = '123.456.789.00'; \n console.log(id.replaceAll('.', '');",
         "output": "\"12345678900\""
       }
@@ -108,13 +108,13 @@
     "replace": {
       "replace": {
         "optionLabel": "a primeira ocorrência de um texto ou expressão regular",
-        "description": "Retorna uma nova string com a primeira ocorrência de um texto ou expressão regular substituída por outro texto específico.",
+        "description": "Retorna uma nova string com a primeira ocorrência de um texto ou expressão regular substituída por outro texto determinado.",
         "example": "const paragraph = 'Código é poesia'; \n console.log(paragraph.replace('poesia', 'arte');",
         "output": "\"Código é arte\""
       },
       "replaceAll": {
         "optionLabel": "todas as ocorrências de um texto ou expressão regular",
-        "description": "Retorna uma nova string com todas as ocorrências de um texto ou expressão regular substituídas por outro texto específico.",
+        "description": "Retorna uma nova string com todas as ocorrências de um texto ou expressão regular substituídas por outro texto determinado.",
         "example": "const date = '26/01/2021'; \n console.log(paragraph.replaceAll('/', '-');",
         "output": "\"26-01-2021\""
       }
@@ -134,13 +134,13 @@
       },
       "slice": {
         "optionLabel": "uma parte da string a começar por uma índice",
-        "description": "Retorna uma nova string com todo o texto a partir de uma posição específica.",
+        "description": "Retorna uma nova string com todo o texto encontrado a partir de um determinado índice.",
         "example": "const paragraph = 'Código é poesia'; \n console.log(`exemplo 1: ${paragraph.slice(7)}`); \n console.log(`exemplo 2: ${paragraph.slice(-6)}`);",
         "output": "\"examplo 1: é poesia\" \n \"examplo 2: poesia\""
       },
       "substring": {
         "optionLabel": "uma parte da string entre dois índices",
-        "description": "Retorna uma nova string com todo o texto entre dois índices específicos de uma string.",
+        "description": "Retorna uma nova string com todo o texto encontrado entre dois índices determinados.",
         "example": "const paragraph = 'Código é poesia'; \n console.log(`exemplo 1: ${paragraph.substring(0, 8)}`); \n console.log(`exemplo 2: ${paragraph.substring(9, 15)}`);",
         "output": "\"exemplo 1: Código é\" \n \"exemplo 2: poesia\""
       }
@@ -173,7 +173,7 @@
         "output": "\"O caractere no índice 2 é d\""
       },
       "codePointAt": {
-        "optionLabel": "o código unicode do caractere no índice",
+        "optionLabel": "o código unicode do caractere no índice especificado",
         "description": "Retorna o código unicode de um caractere em um índice específico.",
         "example": "const hello = 'Olá mundo! 😎'; \n console.log(`O código ${hello.codePointAt(1))} é igual ao caractere ${hello.charAt(1)}`); \n console.log(`O código do emoji 😎 é ${hello.codePointAt(12)}`)",
         "output": "\"O código 108 é igual ao caractere l\" \n \"O código do emoji 😎 é 128526\""
