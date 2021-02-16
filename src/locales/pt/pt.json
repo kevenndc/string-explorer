@@ -135,14 +135,14 @@
       "slice": {
         "optionLabel": "uma parte da string a começar por uma índice",
         "description": "Retorna uma nova string com todo o texto encontrado a partir de um determinado índice.",
-        "example": "const paragraph = 'Código é poesia'; \n console.log(`exemplo 1: ${paragraph.slice(7)}`); \n console.log(`exemplo 2: ${paragraph.slice(-6)}`);",
-        "output": "\"examplo 1: é poesia\" \n \"examplo 2: poesia\""
+        "example": "const paragraph = 'Código é poesia'; \n console.log(paragraph.slice(7)); \n console.log(paragraph.slice(-6));",
+        "output": "\"é poesia\" \n \"poesia\""
       },
       "substring": {
         "optionLabel": "uma parte da string entre dois índices",
         "description": "Retorna uma nova string com todo o texto encontrado entre dois índices determinados.",
-        "example": "const paragraph = 'Código é poesia'; \n console.log(`exemplo 1: ${paragraph.substring(0, 8)}`); \n console.log(`exemplo 2: ${paragraph.substring(9, 15)}`);",
-        "output": "\"exemplo 1: Código é\" \n \"exemplo 2: poesia\""
+        "example": "const paragraph = 'Código é poesia'; \n console.log(paragraph.substring(0, 8)); \n console.log(paragraph.substring(9, 15));",
+        "output": "\"Código é\" \n \"poesia\""
       }
     },
     "has": {
@@ -155,14 +155,14 @@
       "startsWith": {
         "optionLabel": "a string começa com um texto específico",
         "description": "Retorna <code>true</code> ou <code>false</code> se uma string começar com os caracteres determinados.",
-        "example": "const paragraph = 'Código é poesia'; \n console.log(`Começa com Código? ${paragraph.startsWith('Código')}`); \n console.log(`Começa com poesia? ${paragraph.startsWith('poesia')}`);",
-        "output": "\"Começa com Código? true\" \n \"Começa com poesia? false\""
+        "example": "const paragraph = 'Código é poesia'; \n console.log(paragraph.startsWith('Código')); \n console.log(paragraph.startsWith('poesia'));",
+        "output": "true \n false"
       },
       "endsWith": {
         "optionLabel": "a string termina com um texto específico",
         "description": "Retorna <code>true</code> ou <code>false</code> se uma string terminar com os caracteres determinados.",
-        "example": "const paragraph = 'Código é poesia'; \n console.log(`Termina com código? ${paragraph.endsWith('código')}`); \n console.log(`Termina com poesia? ${paragraph.endsWith('poesia')}`);",
-        "output": "\"Termina com código? false\" \n \"Termina com poesia? true\""
+        "example": "const paragraph = 'Código é poesia'; \n console.log(paragraph.endsWith('código')); \n console.log(paragraph.endsWith('poesia'));",
+        "output": "false \n true"
       }
     },
     "findChar": {
@@ -175,8 +175,8 @@
       "codePointAt": {
         "optionLabel": "o código unicode do caractere no índice especificado",
         "description": "Retorna o código unicode de um caractere em um índice específico.",
-        "example": "const hello = 'Olá mundo! 😎'; \n console.log(`O código ${hello.codePointAt(1))} é igual ao caractere ${hello.charAt(1)}`); \n console.log(`O código do emoji 😎 é ${hello.codePointAt(12)}`)",
-        "output": "\"O código 108 é igual ao caractere l\" \n \"O código do emoji 😎 é 128526\""
+        "example": "const hello = 'Olá mundo! 😎'; \n console.log('😎 = ' + hello.codePointAt(11));",
+        "output": "\"😎 = 128526\""
       }
     },
     "findIndex": {
@@ -189,14 +189,14 @@
       "lastIndexOf": {
         "optionLabel": "onde está a última ocorrência do texto",
         "description": "Retorna o índice da última ocorrência de um determinado texto em uma string.",
-        "example": "const paragraph = 'Código é poesia'; \n console.log(`A última ocorrência da letra 'o' está no índice ${paragraph.lastIndexOf('o')}`);",
-        "output": "\"A última ocorrência da letra 'o' está no índice 10\""
+        "example": "const paragraph = 'Código é poesia'; \n console.log(paragraph.lastIndexOf('o'));",
+        "output": "10"
       },
       "search": {
         "optionLabel": "onde está a ocorrência de uma expressão regular",
         "description": "Retorna o primeiro índice da ocorrência de uma expressão regular na string.",
-        "example": "const paragraph = 'itens: item1 item2 item3'; \n console.log(`índice inicial do primeiro item: ${paragraph.search(/item[1-9]/g)}`);",
-        "output": "\"índice inicial do primeiro item: 7\""
+        "example": "const paragraph = 'itens: item1 item2 item3'; \n console.log(paragraph.search(/item[1-9]/g));",
+        "output": "7"
       }
     },
     "convert": {
