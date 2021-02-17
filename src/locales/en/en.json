@@ -67,7 +67,7 @@
       "padEnd": {
         "optionLabel": "some text repeated at the end of a string",
         "description": "Returns a new string filled with the same text at the end of the string until it reaches a given length.",
-        "example": "const firstDigits = '0896'; \n const maskedNumber = firstDigits.padEnd(16, '*') \n console.log(maskedNumber);",
+        "example": "const firstDigits = '0896'; \n const maskedNumber = firstDigits.padEnd(16, '*'); \n console.log(maskedNumber);",
         "output": "\"0896************\""
       } 
     },
@@ -132,13 +132,13 @@
       },
       "slice": {
         "optionLabel": "a part of the string starting at a given index",
-        "description": "Returns a new string with all the text between the given indexes.",
+        "description": "Returns a new string with all the text found from a given index.",
         "example": "const paragraph = 'Code is poetry'; \n console.log(paragraph.slice(5)); \n console.log(paragraph.slice(-6));",
         "output": "\"is poetry\" \n \"poetry\""
       },
       "substring": {
         "optionLabel": "a part of the string between two indexes",
-        "description": "Returns a new string with all the text between the two given indexes.",
+        "description": "Returns a new string with all the text found between the two given indexes.",
         "example": "const paragraph = 'Code is poetry'; \n console.log(paragraph.substring(0, 7)); \n console.log(paragraph.substring(8, 14));",
         "output": "\"Code is\" \n \"poetry\""
       }
@@ -146,7 +146,7 @@
     "has": {
       "includes": {
         "optionLabel": "includes a specific text",
-        "description": "Returns <code>true</code> or <code>false</code> if the string contains the given text.",
+        "description": "Returns <code>true</code> or <code>false</code> if the string includes the given text.",
         "example": "const paragraph = 'Code is poetry'; \n console.log(paragraph.includes('Code')); \n console.log(paragraph.includes('hello'));",
         "output": "true \n false"
       },

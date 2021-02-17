@@ -62,14 +62,14 @@
       },
       "padStart": {
         "optionLabel": "um texto se repetindo no início da string",
-        "description": "Retorna uma nova string com um mesmo texto se repetindo no início da string até ela atingir um tamanho limite determinado.",
+        "description": "Retorna uma nova string com um mesmo texto se repetindo no início da string até ela atingir um tamanho determinado.",
         "example": "const lastDigits = '5834'; \n const maskedNumber = lastDigits.padStart(16, '*'); \n console.log(maskedNumber);",
         "output": "\"************5834\""
       },
       "padEnd": {
         "optionLabel": "um texto se repetindo no final da string",
-        "description": "Retorna uma nova string com um mesmo texto se repetindo no final da string até ela atingir um tamanho limite determinado.",
-        "example": "const firstDigits = '0896'; \n const maskedNumber = firstDigits.padEnd(16, '*') \n console.log(maskedNumber);",
+        "description": "Retorna uma nova string com um mesmo texto se repetindo no final da string até ela atingir um tamanho determinado.",
+        "example": "const firstDigits = '0896'; \n const maskedNumber = firstDigits.padEnd(16, '*'); \n console.log(maskedNumber);",
         "output": "\"0896************\""
       } 
     },
@@ -94,13 +94,13 @@
       },
       "replace": {
         "optionLabel": "a primeira ocorrência de um texto ou expressão regular",
-        "description": "Retorna uma nova string com a primeira ocorrência de um texto ou expressão regular substituída por outro texto determinado. Esse método também pode ser usado para remover a ocorrência ao passar uma string vazia para substituí-la.",
+        "description": "Retorna uma nova string com a primeira ocorrência de um texto ou expressão regular substituída por outro texto determinado. Esse método também pode ser usado para remover a ocorrência ao passar uma string vazia para substituir a ocorrência.",
         "example": "const paragraph = 'Olá mundo!'; \n console.log(paragraph.replace(' mundo', '');",
         "output": "\"Olá!\""
       },
       "replaceAll": {
         "optionLabel": "todas as ocorrências de um texto ou expressão regular",
-        "description": "Retorna uma nova string com todas as ocorrências de um texto ou expressão regular substituídas por outro texto determinado. Esse método também pode ser usado para remover as ocorrências ao passar uma string vazia para substituí-las.",
+        "description": "Retorna uma nova string com todas as ocorrências de um texto ou expressão regular substituídas por outro texto determinado. Esse método também pode ser usado para remover as ocorrências ao passar uma string vazia substituir as ocorrências.",
         "example": "const id = '123.456.789.00'; \n console.log(id.replaceAll('.', '');",
         "output": "\"12345678900\""
       }
@@ -128,7 +128,7 @@
       },
       "matchAll": {
         "optionLabel": "todas as ocorrências de uma expressão regular, incluindo grupos",
-        "description": "Retorna um iterados com todas as ocorrências da expressão regular, incluindo as ocorrências de grupos de captura.",
+        "description": "Retorna um iterador com todas as ocorrências da expressão regular, incluindo as ocorrências de grupos de captura.",
         "example": "const regex = /t(e)(st(\\d?))/g; \n const str = 'test1test2'; \n const array = [...str.matchAll(regex)]; \n console.log(array[0]);",
         "output": "[\"test1\", \"e\", \"st1\", \"1\"]"
       },
@@ -169,8 +169,8 @@
       "charAt": {
         "optionLabel": "o caractere no índice especificado",
         "description": "Retorna o caractere encontrado em um determinado índice da string.",
-        "example": "const paragraph = 'Código é poesia'; \n const index = 2; \n console.log(`O caractere no índice ${index} é ${paragraph.charAt(index)}`);",
-        "output": "\"O caractere no índice 2 é d\""
+        "example": "const paragraph = 'Código é poesia'; \n const index = 2; \n console.log(paragraph.charAt(index));",
+        "output": "\"d\""
       },
       "codePointAt": {
         "optionLabel": "o código unicode do caractere no índice especificado",
