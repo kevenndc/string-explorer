@@ -129,7 +129,7 @@
       "matchAll": {
         "optionLabel": "todas as ocorrências de uma expressão regular, incluindo grupos",
         "description": "Retorna um iterados com todas as ocorrências da expressão regular, incluindo as ocorrências de grupos de captura.",
-        "example": "const regex = /t(e)(st(\\d?))/g; \n const str = 'test1test2'; \n const array = [...str.matchAll(regexp)]; \n console.log(array[0]);",
+        "example": "const regex = /t(e)(st(\\d?))/g; \n const str = 'test1test2'; \n const array = [...str.matchAll(regex)]; \n console.log(array[0]);",
         "output": "[\"test1\", \"e\", \"st1\", \"1\"]"
       },
       "slice": {

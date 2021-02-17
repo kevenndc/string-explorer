@@ -92,7 +92,7 @@
       },
       "replace": {
         "optionLabel": "the first match of a text or regular expression",
-        "description": "Returns a new string with the first match of a text or regular expression replaced by another given text. This method can also be used to remove the match by replacing it with an empty string",
+        "description": "Returns a new string with the first match of a text or regular expression replaced by another given text. This method can also be used to remove the match by replacing it with an empty string.",
         "example": "const paragraph = 'Hello world!'; \n console.log(paragraph.replace(' world', '');",
         "output": "\"Hello!\""
       },
@@ -127,20 +127,20 @@
       "matchAll": {
         "optionLabel": "all matches of a regular expression, including capturing groups",
         "description": "Returns an iterator with all matches of a regular expression in a string, including capturing groups matches.",
-        "example": "const regex = /t(e)(st(\\d?))/g; \n const str = 'test1test2'; \n const array = [...str.matchAll(regexp)]; \n console.log(array[0]);",
+        "example": "const regex = /t(e)(st(\\d?))/g; \n const str = 'test1test2'; \n const array = [...str.matchAll(regex)]; \n console.log(array[0]);",
         "output": "[\"test1\", \"e\", \"st1\", \"1\"]"
       },
       "slice": {
         "optionLabel": "a part of the string starting at a given index",
         "description": "Returns a new string with all the text between the given indexes.",
-        "example": "const paragraph = 'Code is poetry'; \n console.log(`example 1: ${paragraph.slice(5)}`); \n console.log(`example 2: ${paragraph.slice(-6)}`);",
-        "output": "\"example 1: is poetry\" \n \"example 2: poetry\""
+        "example": "const paragraph = 'Code is poetry'; \n console.log(paragraph.slice(5)); \n console.log(paragraph.slice(-6));",
+        "output": "\"is poetry\" \n \"poetry\""
       },
       "substring": {
         "optionLabel": "a part of the string between two indexes",
         "description": "Returns a new string with all the text between the two given indexes.",
-        "example": "const paragraph = 'Code is poetry'; \n console.log(`example 1: ${paragraph.substring(0, 6)}`); \n console.log(`example 2: ${paragraph.substring(8, 14)}`);",
-        "output": "\"example 1: Code is\" \n \"example 2: poetry\""
+        "example": "const paragraph = 'Code is poetry'; \n console.log(paragraph.substring(0, 7)); \n console.log(paragraph.substring(8, 14));",
+        "output": "\"Code is\" \n \"poetry\""
       }
     },
     "has": {
@@ -153,28 +153,28 @@
       "startsWith": {
         "optionLabel": "starts with a specific text",
         "description": "Returns <code>true</code> or <code>false</code> if the string starts with given characters.",
-        "example": "const paragraph = 'Code is poetry'; \n console.log(`Starts with Code? ${paragraph.startsWith('Code')}`); \n console.log(`Starts with Poetry? ${paragraph.startsWith('Poetry')}`);",
-        "output": "\"Starts with Code? true \n Starts with Poetry? false\""
+        "example": "const paragraph = 'Code is poetry'; \n console.log(paragraph.startsWith('Code')); \n console.log(paragraph.startsWith('Poetry'));",
+        "output": "true \n false"
       },
       "endsWith": {
         "optionLabel": "ends with a specific text",
         "description": "Returns <code>true</code> or <code>false</code> if the string ends with given characters.",
-        "example": "const paragraph = 'Code is poetry'; \n console.log(`Ends with code? ${paragraph.endsWith('code')}`); \n console.log(`Ends with poetry? ${paragraph.startsWith('poetry')}`);",
-        "output": "\"Ends with code? false \n Ends with poetry? true\""
+        "example": "const paragraph = 'Code is poetry'; \n console.log(paragraph.endsWith('code')); \n console.log(paragraph.startsWith('poetry'));",
+        "output": "false \n true"
       }
     },
     "findChar": {
       "charAt": {
         "optionLabel": "a character in a given index",
         "description": "Returns a single character in a given index of the string.",
-        "example": "const paragraph = 'Code is poetry'; \n  const index = 2; \n console.log(`The character at index ${index} is ${paragraph.charAt(index)}`);",
-        "output": "\"The character at index 2 is d\""
+        "example": "const paragraph = 'Code is poetry'; \n  const index = 2; \n console.log(paragraph.charAt(index));",
+        "output": "\"d\""
       },
       "codePointAt": {
         "optionLabel": "a character's Unicode number in a given index",
         "description": "Returns the character unicode identifier in a given index of the string.",
-        "example": "const hello = 'Hello world! 😎'; \n console.log(`The code ${hello.codePointAt(4))} is equal to the character ${hello.charAt(4)}`); \n console.log(`The code of the emoji 😎 is ${hello.codePointAt(13)}`)",
-        "output": "\"The code 111 is equal to the character o\" \n \"The code of the emoji 😎 is 128526\""
+        "example": "const hello = 'Hello world! 😎'; \n console.log('😎 = '+ hello.codePointAt(13));",
+        "output": "\"😎 = 128526\""
       }
     },
     "findIndex": {
@@ -187,14 +187,14 @@
       "lastIndexOf": {
         "optionLabel": "where is the last occurrence of a text",
         "description": "Returns the index of the last occurrence a given text in the string.",
-        "example": "const paragraph = 'Code is poetry'; \n console.log(`The last occurrence of the letter 'o' is on index ${paragraph.lastIndexOf('o')}`);",
-        "output": "\"The last occurrence of the letter 'o' is on index 9\""
+        "example": "const paragraph = 'Code is poetry'; \n console.log(paragraph.lastIndexOf('o'));",
+        "output": "9"
       },
       "search": {
         "optionLabel": "where is the occurrence of a regular expression",
         "description": "Returns the first index of the occurrence of a regular expression on a string.",
-        "example": "const paragraph = 'items: item1 item2 item3'; \n console.log(`first item starting index: ${paragraph.search(/item[1-9]/g)`)};",
-        "output": "\"first item starting index: 7\""
+        "example": "const paragraph = 'items: item1 item2 item3'; \n console.log(paragraph.search(/item[1-9]/g));",
+        "output": "7"
       }
     },
     "convert": {
