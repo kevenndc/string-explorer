@@ -13,33 +13,41 @@
       <!-- END of Method Type Select -->
 
       <!-- Method Choice -->
-      <method-select
-        v-if="selectedType"
-        :name="'method-choice'"
-        :label="$t(`labels.methodTypes.${selectedType}.selectedLabel`)"
-        :methods="getSelectedTypeMethods()"
-        :path="`methods.${selectedType}`"
-        :action="'setSelectedMethod'"
-      >
-      </method-select>
+      <transition name="fade">
+        <method-select
+          v-if="selectedType"
+          :name="'method-choice'"
+          :label="$t(`labels.methodTypes.${selectedType}.selectedLabel`)"
+          :methods="getSelectedTypeMethods()"
+          :path="`methods.${selectedType}`"
+          :action="'setSelectedMethod'"
+        >
+        </method-select>
+      </transition>
       <!-- END of Method Choice -->
     </div>
 
+    
     <div class="method-info">
       <!-- Method Description -->
-      <method-description
-        v-if="selectedMethod"
-        :methodName="selectedMethod"
-        :methodPath="methodPath"
-      >
-      </method-description>
+      <transition name="fade">
+        <method-description
+          v-if="selectedMethod"
+          :methodName="selectedMethod"
+          :methodPath="methodPath"
+        >
+        </method-description>
+      </transition>
 
       <!-- END of Method Description -->
-      <method-example
-        v-if="selectedMethod"
-        :methodPath="methodPath"
-      ></method-example>
+      <transition name="fade">
+        <method-example
+          v-if="selectedMethod"
+          :methodPath="methodPath"
+        ></method-example>
+      </transition>
     </div>
+    
   </div>
 </template>
 <script>
@@ -106,5 +114,14 @@ export default {
 <style scoped>
 .select-item:first-child {
   margin-bottom: 10px;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: all 300ms ease;
 }
 </style>
