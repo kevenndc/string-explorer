@@ -29,6 +29,10 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
 
+body {
+  margin: 0;
+}
+
 body, select {
   font-family: 'Nunito', monospace;
   font-size: 18px;
@@ -62,6 +66,53 @@ hr {
 color: #2c3e50;
 margin-top: 60px;
 white-space: pre-line;
+}
+
+@media only screen and (max-width: 1024px) {
+  .container {
+    max-width: 85%;
+  }
+  .method-select {
+    display: block;
+    margin-left: 0;
+  }
+  body, select {
+    font-size: 17px;
+  }
+  h1 {
+    font-size: 1.8em;
+  }
+  h2 {
+    font-size: 1.4em;
+  }
+  h3 {
+    font-size: 1.1em;
+  }
+  code {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 599px) {
+  .container {
+    max-width: 85%;
+    padding-bottom: 2em;
+  }
+  body, select {
+    font-size: 14px;
+  }
+  h1 {
+    font-size: 1.5em;
+  }
+  h2 {
+    font-size: 1.2em;
+  }
+  h3 {
+    font-size: 1.1em;
+  }
+  code {
+    font-size: 12px;
+  }
 }
 
 /* @media (prefers-color-scheme: dark) {

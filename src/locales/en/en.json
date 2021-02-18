@@ -7,7 +7,7 @@
     "language": "Language",
     "firstSelectLabel": "I have a string, I would like to",
     "seeDocs": "see the docs",
-    "example": "Exemple",
+    "example": "Example",
     "output": "Output",
     "methodTypes": {
       "add": {

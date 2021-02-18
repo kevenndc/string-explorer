@@ -44,4 +44,10 @@ export default {
 code[class*="language-"], pre[class*="language-"] {
   white-space: pre-line;
 }
+
+@media only screen and (max-width: 599px) {
+  pre[class*="language-"] {
+    padding: .5em;
+  }
+}
 </style>
