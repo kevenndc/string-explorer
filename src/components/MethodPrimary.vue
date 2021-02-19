@@ -27,26 +27,18 @@
       <!-- END of Method Choice -->
     </div>
 
-    
-    <div class="method-info">
-      <!-- Method Description -->
-      <transition name="fade">
-        <method-description
-          v-if="selectedMethod"
-          :methodName="selectedMethod"
-          :methodPath="methodPath"
-        >
-        </method-description>
-      </transition>
-
-      <!-- END of Method Description -->
-      <transition name="fade">
-        <method-example
-          v-if="selectedMethod"
-          :methodPath="methodPath"
-        ></method-example>
-      </transition>
-    </div>
+    <transition name="fade">
+      <div v-if="selectedMethod" class="method-info">
+        <!-- Method Description -->
+          <method-description
+            :methodName="selectedMethod"
+            :methodPath="methodPath"
+          >
+          </method-description>
+        <!-- END of Method Description -->
+          <method-example :methodPath="methodPath"></method-example>
+      </div>
+    </transition>
     
   </div>
 </template>
