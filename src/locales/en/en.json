@@ -221,6 +221,18 @@
         "description": "Returns a new string with all text converted to lowercase.",
         "example": "const hello = 'Hello world!'; \n console.log(hello.toLowerCase());",
         "output": "\"hello world!\""
+      },
+      "toLocaleUpperCase": {
+        "optionLabel": "all text to uppercase according to locale-specific mappings",
+        "description": "Returns a new string with all text converted to uppercase according to any locale-specific case mappings.",
+        "example": "const city = 'istanbul'; \n console.log(city.toLocaleUpperCase('en-US')); \n console.log(city.toLocaleUpperCase('TR'));",
+        "output": "\"ISTANBUL\" \n \"İSTANBUL\""
+      },
+      "toLocaleLowerCase": {
+        "optionLabel": "all text to lowercase according to locale-specific mappings",
+        "description": "Returns a new string with all text converted to lowercase according to any locale-specific case mappings.",
+        "example": "const city = 'İSTANBUL'; \n console.log(city.toLocaleLowerCase('en-US'));",
+        "output": "\"istanbul\""
       }
     }
   }

@@ -223,6 +223,18 @@
         "description": "Retorna uma nova string com todo o texto convertido para caixa baixa.",
         "example": "const hello = 'Olá mundo!'; \n console.log(hello.toLowerCase());",
         "output": "\"olá mundo!\""
+      },
+      "toLocaleUpperCase": {
+        "optionLabel": "todo texto para caixa alta de acordo com a localidade",
+        "description": "Retorna uma nova string com todo o texto convertido para caixa alta de acordo com qualquer mapeamento de caixa de texto expecífico da localidade.",
+        "example": "const city = 'istanbul'; \n console.log(city.toLocaleUpperCase('en-US')); \n console.log(city.toLocaleUpperCase('TR'));",
+        "output": "\"ISTANBUL\" \n \"İSTANBUL\""
+      },
+      "toLocaleLowerCase": {
+        "optionLabel": "todo texto para caixa baixa de acordo com a localidade",
+        "description": "Retorna uma nova string com todo o texto convertido para caixa baixa de acordo com qualquer mapeamento de caixa de texto expecífico da localidade.",
+        "example": "const city = 'İSTANBUL'; \n console.log(city.toLocaleLowerCase('en-US'));",
+        "output": "\"istanbul\""
       }
     }
   }
