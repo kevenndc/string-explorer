@@ -24,6 +24,7 @@ export default {
   props: {
     methodPath: String
   },
+  
   computed: {
     codeExample() {
       const code = this.$t(`${this.methodPath}.example`);

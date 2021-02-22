@@ -30,13 +30,16 @@
     <transition name="fade">
       <div v-if="selectedMethod" class="method-info">
         <!-- Method Description -->
-          <method-description
-            :methodName="selectedMethod"
-            :methodPath="methodPath"
-          >
-          </method-description>
+        <method-description
+          :methodName="selectedMethod"
+          :methodPath="methodPath"
+        >
+        </method-description>
         <!-- END of Method Description -->
-          <method-example :methodPath="methodPath"></method-example>
+
+        <!-- Method Example -->
+        <method-example :methodPath="methodPath"></method-example>
+        <!-- END of Method Example -->
       </div>
     </transition>
     

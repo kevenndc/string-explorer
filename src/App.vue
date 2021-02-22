@@ -114,13 +114,4 @@ white-space: pre-line;
     font-size: 12px;
   }
 }
-
-/* @media (prefers-color-scheme: dark) {
-  body {
-    background-color: #333;
-  }
-  a {
-    color: #50fa7b;
-  }
-} */
 </style>
