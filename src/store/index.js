@@ -1,6 +1,6 @@
 import { createStore } from "vuex";
 
-// initialize the vuex store using the vuex module.
+// Initialize the vuex store using the vuex module.
 export default createStore({
   state: {
     selectedType: undefined,
@@ -23,7 +23,7 @@ export default createStore({
       state.selectedPath = path;
     },
     resetSelectedMethod(state) {
-      state.selectedMethod = undefined
+      state.selectedMethod = undefined;
     }
   }
 });

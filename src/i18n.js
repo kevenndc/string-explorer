@@ -9,7 +9,7 @@ export default createI18n({
 });
 
 /**
- * Loads all json files in the 'locales' folder and returns a Object with all locales and messages.
+ * Loads all JSON files from the 'locales' directory and returns a Object with all locales and its respective messages.
  * 
  * @returns {Object} messages
  */
@@ -19,6 +19,7 @@ function loadLocaleMessages() {
   const values = keys.map(locales);
 
   const messages = {};
+
   keys.forEach(key => {
     const locale = key.match(/[a-z]{2}/i)[0];
     const index = keys.indexOf(key);
@@ -29,7 +30,7 @@ function loadLocaleMessages() {
 }
 
 /**
- * This function is used to detect the user's default browser language. If the user language doesn't have any translation, the default language will be English.
+ * Detects the user's default browser language. If the user language is not supported , the default language will be English.
  * 
  * @returns {string} locale
  */
